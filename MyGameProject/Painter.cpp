@@ -3,13 +3,17 @@
 #include <cstdlib>
 #include "Painter.h"
 #include <string>
+#include <SDL.h>
 #include <SDL_image.h>
+// #include "main.cpp"
 using namespace std;
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 const int STEPS = 10;
 const float MAX_LENGTH = 100;
+const string WINDOW_TITLE = "An Implementation of Code.org Painter";
+
 Painter::Painter(SDL_Window* window, SDL_Renderer* renderer_)
 	: renderer(renderer_)
 {

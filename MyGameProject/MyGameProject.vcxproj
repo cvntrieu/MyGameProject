@@ -137,6 +137,7 @@
     <ClCompile Include="Painter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="graphics.h" />
     <ClInclude Include="Painter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
