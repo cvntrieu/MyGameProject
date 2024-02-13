@@ -33,28 +33,31 @@ int main(int argc, char* argv[])
 
    // painter.clearWithBgColor(BLUE_COLOR);
 
-  //  SDL_Texture* background = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\vecteezy_cartoon-colorful-panorama-of-spring-summer-beautiful-nature_7633071-1.jpg", renderer);
+  //  renderTexture(player, 100, 100, renderer);
+
+    //SDL_RenderPresent(renderer);
+   // waitUntilKeyPressed();
+   
+    // Load anh khi moi vao game, chua choi. Nhan chuot vi tri nao do va Enter moi bat dau choi
+    SDL_Texture* background = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\vecteezy_cartoon-colorful-panorama-of-spring-summer-beautiful-nature_7633071-1.jpg", renderer);
     // D?u m?i tên thay vì ch?m v?i "expression must have class type but it has type * "
    // NULL1- Toàn b? txxture ?c sao chép
    // NULL2-  v? trí và kích th??c c?a texture trên renderer. 
    // N?u là NULL, texture s? ???c sao chép ??n v? trí (0,0) trên renderer
   //  SDL_Texture* player = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\medium.png", renderer);
     // V? hình ?nh nh? lên trung tâm ?nh n?n
-  //  SDL_RenderCopy(renderer, background, NULL, NULL);
-    //SDL_RenderPresent(renderer);
-    //waitUntilKeyPressed();
+    SDL_RenderCopy(renderer, background, NULL, NULL);
+    SDL_RenderPresent(renderer);
+    waitUntilKeyPressed();
 
-  //  renderTexture(player, 100, 100, renderer);
-
-    //SDL_RenderPresent(renderer);
-   // waitUntilKeyPressed();
-   
     Graphics graphics(renderer); // Buoc phai khoi tao renderer
 
     // Nap texture truoc vong lap
     SDL_Texture* target = graphics.loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\medium.png");
     SDL_Event event;
     bool quit = false;
+    // Poll Event lay toa do tiep theo cua chuot, 
+    // n?u không s? b? t?c ? event chu?t ??u tien: No cu o toa do dau tien va lap vo han, ko nhan dc su kien tiep theo
     while (!quit) {
         while (SDL_PollEvent(&event))
         {
@@ -65,20 +68,19 @@ int main(int argc, char* argv[])
                 break;
             }
         }
-        waitUntilKeyPressed();
 
-
-        //SDL_DestroyTexture(player);
-        //player = NULL;
-        //SDL_DestroyTexture(background);
-        //background = NULL;
-        SDL_RenderClear(renderer); // Xoa man hinh
+        // Load anh nen moi lan lap
+        SDL_Texture* background = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\vecteezy_cartoon-colorful-panorama-of-spring-summer-beautiful-nature_7633071-1.jpg", renderer);
+        SDL_RenderCopy(renderer, background, NULL, NULL);
+        SDL_RenderPresent(renderer);
+        
         int x, y;
         SDL_GetMouseState(&x, &y);
         cerr << x << ", " << y << endl;
         graphics.renderTexture(target, x, y);
         SDL_RenderPresent(renderer); // Cap nhat man hinh moi theo target tren
-        SDL_Delay(3);
+        waitUntilKeyPressed(); // Phai co dong nay de doi, hoac SDL_Delay(time)
+        SDL_RenderClear(renderer); // Xoa man hinh sau loat su kien tren
     }
 
     SDL_DestroyTexture(target);
