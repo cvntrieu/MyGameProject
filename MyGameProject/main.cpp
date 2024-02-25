@@ -3,6 +3,9 @@
 #include<iostream>  
 #include "Painter.h"
 #include "graphics.h"
+#include "defs.h"
+#include <ctime>
+#include <cstdlib>
 #include<SDL.h>       
 #include<SDL_image.h> 
 #include<SDL_mixer.h> 
@@ -10,10 +13,7 @@
 
 using namespace std;
 
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
-const string WINDOW_TITLE = "An Implementation of Code.org Painter";
-
+// 
 void initSDL(SDL_Window*& window, SDL_Renderer*& renderer);
 void quitSDL(SDL_Window* window, SDL_Renderer* renderer);
 void logSDLError(std::ostream& os,
@@ -54,15 +54,36 @@ int main(int argc, char* argv[])
 
     // Nap texture truoc vong lap
     SDL_Texture* target = graphics.loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\medium.png");
+    SDL_Texture* enemy  = graphics.loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Enemy.png");
     SDL_Event event;
     bool quit = false;
+    int x1 = SCREEN_WIDTH / 2, y1 = SCREEN_HEIGHT / 2;
     // Poll Event lay toa do tiep theo cua chuot, 
     // n?u không s? b? t?c ? event chu?t ??u tien: No cu o toa do dau tien va lap vo han, ko nhan dc su kien tiep theo
     while (!quit) {
+
+        int x2, y2;
+
         while (SDL_PollEvent(&event))
         {
-            switch (event.type)
+            switch (event.key.keysym.sym)  
             {
+            case SDLK_UP: {
+                y1++;
+                break;
+            }
+            case SDLK_DOWN: {
+                y1--;
+                break;
+            }
+            case SDLK_LEFT: {
+                x1--;
+                break;
+            }
+            case SDLK_RIGHT: {
+                x1++;
+                break;
+            }
             case SDL_QUIT:
                 exit(0);
                 break;
@@ -74,10 +95,14 @@ int main(int argc, char* argv[])
         SDL_RenderCopy(renderer, background, NULL, NULL);
         SDL_RenderPresent(renderer);
         
-        int x, y;
-        SDL_GetMouseState(&x, &y);
-        cerr << x << ", " << y << endl;
-        graphics.renderTexture(target, x, y);
+        SDL_GetMouseState(&x1, &y1);
+        srand(time(0));
+        x2 = rand() % SCREEN_WIDTH;
+        y2 = SCREEN_HEIGHT;
+
+        //cerr << x << ", " << y << endl;
+        graphics.renderTexture(target, x1, y1);
+        graphics.renderTexture(enemy, x2, y2);
         SDL_RenderPresent(renderer); // Cap nhat man hinh moi theo target tren
         waitUntilKeyPressed(); // Phai co dong nay de doi, hoac SDL_Delay(time)
         SDL_RenderClear(renderer); // Xoa man hinh sau loat su kien tren

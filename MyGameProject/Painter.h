@@ -42,8 +42,6 @@ public:
 	void clearWithBgColor(SDL_Color color);
 };
 
-
-
 #endif 
 
 
