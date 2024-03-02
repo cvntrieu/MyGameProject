@@ -1,10 +1,15 @@
 #pragma once
-#ifndef defs.h
-#define defs.h
+#ifndef DEFS_H
+#define DEFS_H
 
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
-const char* WINDOW_TITLE = "An impletion of Painter! ";
+#include<iostream>  
+#include<string>
+#include <ctime>
+#include <cstdlib>
+#include<SDL.h>       
+#include<SDL_image.h> 
+#include<SDL_mixer.h> 
+#include<SDL_ttf.h>   
 
 
-#endif // !defs
+#endif 
