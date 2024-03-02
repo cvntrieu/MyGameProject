@@ -1,11 +1,2 @@
-﻿  graphics.cpp
-  main.cpp
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\main.cpp(53,62): warning C4390: ';': empty controlled statement found; is this the intent?
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\main.cpp(54,64): warning C4390: ';': empty controlled statement found; is this the intent?
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\main.cpp(55,64): warning C4390: ';': empty controlled statement found; is this the intent?
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\main.cpp(45,17): warning C4101: 'a': unreferenced local variable
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\main.cpp(45,20): warning C4101: 'b': unreferenced local variable
-  Generating Code...
-  LINK : C:\Users\ADMIN\source\repos\MyGameProject\x64\Debug\MyGameProject.exe not found or not built by the last incremental link; performing full link
-main.obj : error LNK2005: "char const * const WINDOW_TITLE" (?WINDOW_TITLE@@3PEBDEB) already defined in graphics.obj
-C:\Users\ADMIN\source\repos\MyGameProject\x64\Debug\MyGameProject.exe : fatal error LNK1169: one or more multiply defined symbols found
+﻿  main.cpp
+  MyGameProject.vcxproj -> C:\Users\ADMIN\source\repos\MyGameProject\x64\Debug\MyGameProject.exe
