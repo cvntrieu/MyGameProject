@@ -1,0 +1,98 @@
+
+#include "MainObject.h"
+
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
+
+MainObject::MainObject() {
+
+	texture = nullptr;
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = Width;
+	rect.h = Height;
+
+	x_val = 0;
+	y_val = 0;
+}
+
+MainObject::~MainObject() {
+	SDL_DestroyTexture(texture);
+}
+
+
+void MainObject::HandleInputAction(SDL_Event& events) {
+
+	if (events.type == SDL_KEYDOWN) {
+
+		switch (events.key.keysym.sym) {
+
+		case SDLK_UP:
+		{
+			rect.y -= Width;
+			if (rect.y < 0 ) rect.y += 100;
+			break;
+		}
+		case SDLK_DOWN:
+		{
+			rect.y += Width;
+			if ( rect.y + Height >  SCREEN_HEIGHT) rect.y -= 100;
+			break;
+		}
+		case SDLK_RIGHT:
+		{
+			rect.x += Width;
+			if ( rect.x + Width > SCREEN_WIDTH ) rect.x -= 100;
+			break;
+		}
+		case SDLK_LEFT:
+		{
+			rect.x -= Width;
+			if (rect.x < 0 ) rect.x += 100;
+			break;
+		}
+		
+		}
+		
+	}
+}
+
+//	else if (events.type == SDL_KEYUP) { // Nha phim ra, reset lai buoc nhay
+//
+//		switch (events.key.keysym.sym) {
+//
+//		case SDLK_UP:
+//		{
+//			y_val += Width;
+//			break;
+//		}
+//		case SDLK_DOWN:
+//		{
+//			y_val -= Width;
+//			break;
+//		}
+//		case SDLK_RIGHT:
+//		{
+//			x_val -= Width;
+//			break;
+//		}
+//		case SDLK_LEFT:
+//		{
+//			x_val += Width;
+//			break;
+//		}
+//		default:
+//		{
+//			break;
+//		}
+//		}
+//	}
+//	else {}
+//}
+
+
+void MainObject::Move() {
+
+	
+
+}

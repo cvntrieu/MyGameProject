@@ -1,2 +1,4 @@
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\main.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\main.obj
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\Painter.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\Painter.obj
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\BaseObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\BaseObject.obj
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\MainObject.obj
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.h;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\MainObject.obj
