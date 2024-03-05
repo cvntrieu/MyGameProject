@@ -1,3 +1,5 @@
+#ifndef MAIN_OBJECT_H
+#define MAIN_OBJECT_H
 
 
 #include "BaseObject.h"
@@ -12,10 +14,6 @@ public:
 	~MainObject();
 
 	void HandleInputAction(SDL_Event& events);
-
-	void Move();
-
-
-	double x_val;
-	double y_val;
 };
+
+#endif

@@ -27,9 +27,15 @@
     <ClCompile Include="MainObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ThreatObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreatObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

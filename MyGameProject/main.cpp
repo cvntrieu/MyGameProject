@@ -2,6 +2,7 @@
 
 #include "BaseObject.h"
 #include "MainObject.h"
+#include "ThreatObject.h"
 
 using namespace std;
 
@@ -30,16 +31,19 @@ int main(int argc, char* argv[])
     waitUntilKeyPressed();
 
     MainObject player;
-    SDL_Texture* defender = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\medium.png", renderer);
-    render(renderer, defender, player.rect);
+    player.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\medium.png", renderer);
+    render(renderer, player.texture, player.rect);
     SDL_RenderPresent(renderer);
     waitUntilKeyPressed();
 
     bool quit = false;
     SDL_Event event;
+    ThreatObject* threat = new ThreatObject();
+    threat->texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
 
     while (!quit)
     {
+
         while (SDL_PollEvent(&event)) {
 
             if (event.type == SDL_QUIT) {
@@ -49,25 +53,23 @@ int main(int argc, char* argv[])
             }
             else if (event.type == SDL_KEYDOWN) {
 
+
                 SDL_RenderCopy(renderer, background, NULL, NULL);
                 SDL_RenderPresent(renderer);
+
                 player.HandleInputAction(event);
-             //   player.Move();
-                render(renderer, defender, player.rect);
+                render(renderer, player.texture, player.rect);
                 SDL_RenderPresent(renderer);
                 cout << player.rect.x << " " << player.rect.y << endl;
             }
         }
-
-  //      waitUntilKeyPressed();
- /*       SDL_Rect playerRect = { player.rect.x, player.rect.y, Width, Height };
-        SDL_RenderFillRect(renderer, &playerRect);
-        SDL_RenderPresent(renderer);*/
+        render(renderer, threat->texture, threat->rect);
+        SDL_RenderPresent(renderer);
     }
 
 
-    SDL_DestroyTexture(defender);
-    defender = NULL;
+    SDL_DestroyTexture(player.texture);
+    player.texture = NULL;
     SDL_DestroyTexture(background);
     background = NULL;
 

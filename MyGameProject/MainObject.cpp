@@ -6,7 +6,7 @@ const int SCREEN_HEIGHT = 600;
 
 MainObject::MainObject() {
 
-	texture = nullptr;
+    texture = nullptr;
 	rect.x = 0;
 	rect.y = 0;
 	rect.w = Width;
@@ -16,9 +16,8 @@ MainObject::MainObject() {
 	y_val = 0;
 }
 
-MainObject::~MainObject() {
-	SDL_DestroyTexture(texture);
-}
+
+MainObject::~MainObject() {}
 
 
 void MainObject::HandleInputAction(SDL_Event& events) {
@@ -55,44 +54,4 @@ void MainObject::HandleInputAction(SDL_Event& events) {
 		}
 		
 	}
-}
-
-//	else if (events.type == SDL_KEYUP) { // Nha phim ra, reset lai buoc nhay
-//
-//		switch (events.key.keysym.sym) {
-//
-//		case SDLK_UP:
-//		{
-//			y_val += Width;
-//			break;
-//		}
-//		case SDLK_DOWN:
-//		{
-//			y_val -= Width;
-//			break;
-//		}
-//		case SDLK_RIGHT:
-//		{
-//			x_val -= Width;
-//			break;
-//		}
-//		case SDLK_LEFT:
-//		{
-//			x_val += Width;
-//			break;
-//		}
-//		default:
-//		{
-//			break;
-//		}
-//		}
-//	}
-//	else {}
-//}
-
-
-void MainObject::Move() {
-
-	
-
 }

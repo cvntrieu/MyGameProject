@@ -11,16 +11,17 @@ const char* WINDOW_TITLE = "Hello World!";
 
 BaseObject::BaseObject() {
 
-    texture = nullptr;
     rect.x = 0;
     rect.y = 0;
-    rect.w = SCREEN_WIDTH;
-    rect.h = SCREEN_HEIGHT;
+    rect.w = 0;
+    rect.h = 0;
+    texture = nullptr;
+
+    x_val = 0;
+    y_val = 0;
 }
 
-BaseObject::~BaseObject() { 
-    SDL_DestroyTexture(texture);
-}
+BaseObject::~BaseObject() {}
 
 SDL_Window* initWin() {
 
@@ -54,6 +55,7 @@ SDL_Renderer* initRen(SDL_Window* window) {
     return renderer;
 }
 
+
 void logErrorAndExit(const char* msg, const char* error)
 {
     SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR,
@@ -63,7 +65,7 @@ void logErrorAndExit(const char* msg, const char* error)
 
 
 
-SDL_Texture* loadTexture(const char* filename, SDL_Renderer* renderer )
+SDL_Texture* loadTexture(const char* filename, SDL_Renderer* renderer)
 {
     SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO,
         "Loading %s", filename);
