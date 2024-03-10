@@ -15,12 +15,11 @@ class BaseObject {
 
 public:
     SDL_Rect rect;
+    SDL_Texture* texture;
+
     BaseObject();
     ~BaseObject();
 
-    double x_val = 0;
-    double y_val = 0;
-    SDL_Texture* texture;
 };
 
 

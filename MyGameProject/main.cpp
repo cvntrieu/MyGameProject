@@ -4,6 +4,12 @@
 #include "MainObject.h"
 #include "ThreatObject.h"
 
+#define ThreatWidth  200
+#define ThreatHeight 131
+
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
+
 using namespace std;
 
 
@@ -11,10 +17,8 @@ void waitUntilKeyPressed()
 {
     SDL_Event e;
     while (true) {
-        if (SDL_PollEvent(&e) != 0 &&
-            (e.type == SDL_KEYDOWN || e.type == SDL_QUIT))
-            return;
-        SDL_Delay(10);
+        if (SDL_PollEvent(&e) != 0 && (e.type == SDL_KEYDOWN || e.type == SDL_QUIT)) return;
+        SDL_Delay(1);
     }
 }
 
@@ -27,19 +31,18 @@ int main(int argc, char* argv[])
 
     SDL_Texture* background = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\vecteezy_cartoon-colorful-panorama-of-spring-summer-beautiful-nature_7633071-1.jpg", renderer);
     SDL_RenderCopy(renderer, background, NULL, NULL);
-    SDL_RenderPresent(renderer);
-    waitUntilKeyPressed();
 
     MainObject player;
     player.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\medium.png", renderer);
     render(renderer, player.texture, player.rect);
-    SDL_RenderPresent(renderer);
-    waitUntilKeyPressed();
+
+
+    ThreatObject threat;
+    threat.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Plane2.png", renderer);
+
 
     bool quit = false;
     SDL_Event event;
-    ThreatObject* threat = new ThreatObject();
-    threat->texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
 
     while (!quit)
     {
@@ -49,24 +52,23 @@ int main(int argc, char* argv[])
             if (event.type == SDL_QUIT) {
 
                 quit = true;
-                break;
             }
             else if (event.type == SDL_KEYDOWN) {
 
-
-                SDL_RenderCopy(renderer, background, NULL, NULL);
-                SDL_RenderPresent(renderer);
-
                 player.HandleInputAction(event);
-                render(renderer, player.texture, player.rect);
-                SDL_RenderPresent(renderer);
                 cout << player.rect.x << " " << player.rect.y << endl;
             }
         }
-        render(renderer, threat->texture, threat->rect);
-        SDL_RenderPresent(renderer);
-    }
 
+        threat.moveControl();
+
+        SDL_RenderClear(renderer);
+        SDL_RenderCopy(renderer, background, NULL, NULL);
+        render(renderer, player.texture, player.rect);
+        render(renderer, threat.texture, threat.rect);
+        SDL_RenderPresent(renderer);
+     //   SDL_Delay(10);
+    }
 
     SDL_DestroyTexture(player.texture);
     player.texture = NULL;

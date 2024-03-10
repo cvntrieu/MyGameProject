@@ -13,17 +13,17 @@ class ThreatObject : public BaseObject
 {
 public:
 
+	int x_Threat;
+	int y_Threat;
+
 	ThreatObject();
 	~ThreatObject();
 
+	void moveControl();
 
-	void moveControl(const double xBorder, const double yBorder);
-	void HandleInputAction(SDL_Event &e);
+private:
 
-	void setX(double& val);
-	void setY(double& val);
-	double getX() const;
-	double getY() const;
+	int v;
 };
 
 #endif

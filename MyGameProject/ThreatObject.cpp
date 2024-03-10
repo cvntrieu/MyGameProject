@@ -5,40 +5,29 @@ const int SCREEN_HEIGHT = 600;
 
 ThreatObject::ThreatObject(){
 
-	// Vi tri ban dau ma Threat xuat hien
-	rect.x = SCREEN_WIDTH - 201;
-	rect.y = SCREEN_HEIGHT / 2;
-	rect.w = ThreatWidth;
-	rect.h = ThreatHeight;
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = 0;
+	rect.h = 0;
+
+	x_Threat = SCREEN_WIDTH;
+	y_Threat = SCREEN_HEIGHT * 0.3;
+	v = 5;
 	texture = nullptr;
-
-	x_val = 0;
-	y_val = 0;
 }
 
 
-ThreatObject::~ThreatObject() {}
+ThreatObject::~ThreatObject() { delete[] texture; }
 
 
-
-void ThreatObject::setX(double& val) { x_val = val; }
-void ThreatObject::setY(double& val) { y_val = val; }
-double ThreatObject::getX() const    { return x_val; }
-double ThreatObject::getY() const    { return y_val; }
-
-
-void ThreatObject::moveControl(const double xBorder, const double yBorder)
+void ThreatObject::moveControl()
 {
-
-	rect.x -= x_val;
-	if (rect.x < 0) rect.x = SCREEN_WIDTH;
+	x_Threat -= v;
+	rect = { x_Threat, y_Threat, ThreatWidth / 2, ThreatHeight / 2 };
+	if (x_Threat + SCREEN_WIDTH < 0) x_Threat = SCREEN_WIDTH;
 }
 
 
-void ThreatObject::HandleInputAction(SDL_Event& e)
-{
-	
 
-}
 
 

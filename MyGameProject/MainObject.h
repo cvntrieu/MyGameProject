@@ -9,7 +9,7 @@
 class MainObject : public BaseObject
 {
 public:
-	
+
 	MainObject();
 	~MainObject();
 

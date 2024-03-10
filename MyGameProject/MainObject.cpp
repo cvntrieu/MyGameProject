@@ -6,18 +6,15 @@ const int SCREEN_HEIGHT = 600;
 
 MainObject::MainObject() {
 
-    texture = nullptr;
 	rect.x = 0;
 	rect.y = 0;
 	rect.w = Width;
 	rect.h = Height;
-
-	x_val = 0;
-	y_val = 0;
+	texture = nullptr;
 }
 
 
-MainObject::~MainObject() {}
+MainObject::~MainObject() { delete[] texture; }
 
 
 void MainObject::HandleInputAction(SDL_Event& events) {
@@ -50,7 +47,8 @@ void MainObject::HandleInputAction(SDL_Event& events) {
 			if (rect.x < 0 ) rect.x += 100;
 			break;
 		}
-		
+		default:
+			break;
 		}
 		
 	}

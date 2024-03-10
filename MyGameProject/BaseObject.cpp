@@ -16,12 +16,10 @@ BaseObject::BaseObject() {
     rect.w = 0;
     rect.h = 0;
     texture = nullptr;
-
-    x_val = 0;
-    y_val = 0;
 }
 
-BaseObject::~BaseObject() {}
+BaseObject::~BaseObject() { delete[] texture; }
+
 
 SDL_Window* initWin() {
 
