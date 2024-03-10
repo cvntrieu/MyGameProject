@@ -1,7 +1,25 @@
-﻿  ThreatObject.cpp
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\ThreatObject.cpp(14,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+﻿  BaseObject.cpp
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\BaseObject.cpp(21,29): warning C4150: deletion of pointer to incomplete type 'SDL_Texture'; no destructor called
+  C:\SDL2-2.28.5\include\SDL_render.h(147,8):
+  see declaration of 'SDL_Texture'
+  
+  MainObject.cpp
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp(17,29): warning C4150: deletion of pointer to incomplete type 'SDL_Texture'; no destructor called
+  C:\SDL2-2.28.5\include\SDL_render.h(147,8):
+  see declaration of 'SDL_Texture'
+  
+  MainObject.h
+  TextObject.cpp
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\TextObject.cpp(19,29): warning C4150: deletion of pointer to incomplete type 'SDL_Texture'; no destructor called
+  C:\SDL2-2.28.5\include\SDL_render.h(147,8):
+  see declaration of 'SDL_Texture'
+  
+  ThreatObject.cpp
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\ThreatObject.cpp(20,33): warning C4150: deletion of pointer to incomplete type 'SDL_Texture'; no destructor called
   C:\SDL2-2.28.5\include\SDL_render.h(147,8):
   see declaration of 'SDL_Texture'
   
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\ThreatObject.cpp(32,75): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   MyGameProject.vcxproj -> C:\Users\ADMIN\source\repos\MyGameProject\x64\Debug\MyGameProject.exe

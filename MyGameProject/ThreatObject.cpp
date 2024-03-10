@@ -11,7 +11,7 @@ ThreatObject::ThreatObject(){
 	rect.h = 0;
 
 	x_Threat = SCREEN_WIDTH;
-	y_Threat = SCREEN_HEIGHT * 0.3;
+	y_Threat = 0;
 	v = 5;
 	texture = nullptr;
 }
@@ -23,8 +23,14 @@ ThreatObject::~ThreatObject() { delete[] texture; }
 void ThreatObject::moveControl()
 {
 	x_Threat -= v;
+
 	rect = { x_Threat, y_Threat, ThreatWidth / 2, ThreatHeight / 2 };
-	if (x_Threat + SCREEN_WIDTH < 0) x_Threat = SCREEN_WIDTH;
+	if (x_Threat + SCREEN_WIDTH < 0) {
+
+		x_Threat = SCREEN_WIDTH;
+		y_Threat = rand() % 600;
+		if (y_Threat > SCREEN_HEIGHT - 150) y_Threat = y_Threat = SCREEN_HEIGHT * 0.3;
+	}
 }
 
 

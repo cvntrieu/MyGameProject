@@ -6,8 +6,8 @@ const int SCREEN_HEIGHT = 600;
 
 MainObject::MainObject() {
 
-	rect.x = 0;
-	rect.y = 0;
+	rect.x = 1;
+	rect.y = 1;
 	rect.w = Width;
 	rect.h = Height;
 	texture = nullptr;

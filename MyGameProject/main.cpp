@@ -3,6 +3,7 @@
 #include "BaseObject.h"
 #include "MainObject.h"
 #include "ThreatObject.h"
+#include "TextObject.h"
 
 #define ThreatWidth  200
 #define ThreatHeight 131
@@ -26,6 +27,18 @@ void waitUntilKeyPressed()
 int main(int argc, char* argv[])
 {
         
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+        cout << "SDL could not initialize! SDL Error: " << SDL_GetError() << endl;
+        return 1;
+    }
+
+    if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
+        cout << "SDL could not initialize! SDL Error: " << SDL_GetError() << endl;
+        return 1;
+    }
+
+    TTF_Font* fontOfText = NULL;
+    SDL_Texture* menu = NULL;
     SDL_Window* window = initWin();
     SDL_Renderer* renderer = initRen(window);
 
@@ -38,7 +51,7 @@ int main(int argc, char* argv[])
 
 
     ThreatObject threat;
-    threat.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Plane2.png", renderer);
+    threat.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
 
 
     bool quit = false;
@@ -50,7 +63,6 @@ int main(int argc, char* argv[])
         while (SDL_PollEvent(&event)) {
 
             if (event.type == SDL_QUIT) {
-
                 quit = true;
             }
             else if (event.type == SDL_KEYDOWN) {
@@ -67,19 +79,17 @@ int main(int argc, char* argv[])
         render(renderer, player.texture, player.rect);
         render(renderer, threat.texture, threat.rect);
         SDL_RenderPresent(renderer);
-     //   SDL_Delay(10);
     }
 
+    SDL_DestroyTexture(threat.texture);
+    threat.texture = NULL;
     SDL_DestroyTexture(player.texture);
     player.texture = NULL;
     SDL_DestroyTexture(background);
     background = NULL;
 
 
-    IMG_Quit();
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+    Quit(window, renderer);
     return 0;
 }
 
