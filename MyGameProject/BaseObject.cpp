@@ -5,8 +5,8 @@
 
 using namespace std;
 
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
+const int SCREEN_WIDTH = 900;
+const int SCREEN_HEIGHT = 700;
 const char* WINDOW_TITLE = "The Defender !";
 
 BaseObject::BaseObject() {
@@ -66,6 +66,9 @@ void initText(TTF_Font* fontOfText)
         if (fontOfText == NULL) {
             cout << "Failed to load font: " << TTF_GetError() << endl;
         }
+        else {
+            cout << "Font Load success!";
+        }
     }
 }
 
@@ -111,6 +114,14 @@ int ShowMenu(SDL_Texture* des, TTF_Font* font)
     return 0;
 }
 
+void drawIntro(SDL_Renderer* renderer, SDL_Texture* intro, SDL_Texture* button, SDL_Rect rect)
+{
+
+    SDL_RenderCopy(renderer, intro, NULL, NULL);
+    SDL_RenderCopy(renderer, button, NULL, &rect);
+}
+
+
 
 bool CheckRectFocus(int x, int y, SDL_Rect rect) {
 
@@ -124,7 +135,7 @@ bool CheckRectFocus(int x, int y, SDL_Rect rect) {
 void ShowMenu(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font)
 {
 
-    SDL_Texture* menu = loadTexture("C:\\Users\\ADMIN\\source\\repos\\yGameProject\\Menu.jpg", renderer);
+    SDL_Texture* menu = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Menu.png", renderer);
     if (menu == nullptr) {
         cout << "Cannot create Menu! " << endl;
     }
@@ -139,7 +150,6 @@ void ShowMenu(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font)
         text_menu.SetColor(TextObject::WHITE_TEXT); // Kieu enum pr goi nhu nay !
         text_menu.rect = { pos_arr.x, pos_arr.y, 700, 200 };
 
-
         bool MouseSelected = 0; // Kiem tra viec focus 
         bool mouse_quit = false;
         SDL_Event mouse;
@@ -148,8 +158,8 @@ void ShowMenu(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font)
         while (!mouse_quit)
         {
             while (SDL_PollEvent(&mouse)) {
-                switch(mouse.type)
-                { 
+                switch (mouse.type)
+                {
                 case SDL_QUIT: {
                     mouse_quit = true;
                     break;
@@ -183,7 +193,7 @@ void ShowMenu(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font)
                     }
                     break;
                 }
-                
+
                 case SDL_KEYDOWN: {
                     if (mouse.key.keysym.sym == SDLK_ESCAPE) { // Nhan phim thoat X hoac esc
                         Quit(window, renderer);
@@ -192,9 +202,15 @@ void ShowMenu(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font)
 
                 }
             }
+         SDL_RenderPresent(renderer);
         }
-
     }
 }
 
+
+void destroyTexture(SDL_Texture* texture)
+{
+    SDL_DestroyTexture(texture);
+    texture = NULL;
+}
 

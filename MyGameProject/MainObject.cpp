@@ -1,13 +1,13 @@
 
 #include "MainObject.h"
 
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
+const int SCREEN_WIDTH = 900;
+const int SCREEN_HEIGHT = 700;
 
 MainObject::MainObject() {
 
-	rect.x = 1;
-	rect.y = 1;
+	rect.x = 0;
+	rect.y = 100;
 	rect.w = Width;
 	rect.h = Height;
 	texture = nullptr;
