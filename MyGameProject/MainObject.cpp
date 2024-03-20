@@ -14,7 +14,15 @@ MainObject::MainObject() {
 }
 
 
-MainObject::~MainObject() { delete[] texture; }
+MainObject::~MainObject() { 
+
+
+	if (texture != nullptr) {
+
+		SDL_DestroyTexture(texture);
+		texture = nullptr;
+	}
+}
 
 
 void MainObject::HandleInputAction(SDL_Event& events) {
@@ -26,7 +34,7 @@ void MainObject::HandleInputAction(SDL_Event& events) {
 		case SDLK_UP:
 		{
 			rect.y -= Width;
-			if (rect.y < 0 ) rect.y += 100;
+			if (rect.y < 90 ) rect.y = 90;
 			break;
 		}
 		case SDLK_DOWN:

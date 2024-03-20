@@ -4,6 +4,7 @@
 
 
 #include <SDL.h>
+#include <vector>
 #include <string>
 #include <SDL_image.h>
 #include <SDL_ttf.h>

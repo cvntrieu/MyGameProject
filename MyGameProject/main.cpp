@@ -5,12 +5,6 @@
 #include "ThreatObject.h"
 #include "TextObject.h"
 
-#define ThreatWidth  200
-#define ThreatHeight 131
-
-const int SCREEN_WIDTH = 900;
-const int SCREEN_HEIGHT = 700;
-
 using namespace std;
 
 
@@ -49,8 +43,9 @@ int main(int argc, char* argv[])
 
 	ThreatObject threat;
 	threat.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
-
-
+	threat.createThreat(3);
+	srand(static_cast<unsigned int>(time(nullptr)));
+	threat.rect.y = rand() % 600;
 
 	bool quit = false;
 	while (!quit)
@@ -68,40 +63,41 @@ int main(int argc, char* argv[])
 				SDL_GetMouseState(&mouseX, &mouseY);
 				if (CheckRectFocus(mouseX, mouseY, playButtonRect) == true) {
 
-					destroyTexture(intro);
-					destroyTexture(playButton);
 					bool gameQuit = false;
 					while (!gameQuit) {
 						SDL_Event e;
 						while (SDL_PollEvent(&e)) {
 
 							if (e.type == SDL_QUIT) {
-								quit = true;
+								gameQuit = true;
 							}
 							else if (e.type == SDL_KEYDOWN) {
 
 								player.HandleInputAction(e);
-								cout << player.rect.x << " " << player.rect.y << endl;
+								cout << "Player: " << player.rect.x << " " << player.rect.y << endl;
 							}
 						}
 
+						cout << "Start render" << endl;
 						threat.moveControl();
+
 						SDL_RenderClear(renderer);
 						SDL_RenderCopy(renderer, background, NULL, NULL);
 						render(renderer, player.texture, player.rect);
 						render(renderer, threat.texture, threat.rect);
 						SDL_RenderPresent(renderer);
 					}
-				//	quit = true;
+
+				destroyTexture(intro);
+				destroyTexture(playButton);
+				destroyTexture(background);
+				Quit(window, renderer);
 				}
 			}
 		}
 	}
 
-	destroyTexture(threat.texture);
-	destroyTexture(player.texture);
-	destroyTexture(background);
-	Quit(window, renderer);
+	
 	return 0;
 }
 

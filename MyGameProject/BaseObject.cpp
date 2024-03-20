@@ -18,7 +18,14 @@ BaseObject::BaseObject() {
     texture = nullptr;
 }
 
-BaseObject::~BaseObject() { delete[] texture; }
+BaseObject::~BaseObject() { 
+
+    if (texture != nullptr) {
+
+        SDL_DestroyTexture(texture);
+        texture = nullptr;
+    }
+}
 
 
 SDL_Window* initWin() {

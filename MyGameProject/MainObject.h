@@ -3,7 +3,7 @@
 
 
 #include "BaseObject.h"
-#define Width 100
+#define Width  100
 #define Height 69
 
 class MainObject : public BaseObject

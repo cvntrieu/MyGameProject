@@ -1,35 +1,56 @@
 
 #include "ThreatObject.h"
+
 const int SCREEN_WIDTH = 900;
 const int SCREEN_HEIGHT = 700;
 
 ThreatObject::ThreatObject(){
 
-	rect.x = 0;
-	rect.y = 0;
+	rect.x = SCREEN_WIDTH;
+	rect.y = rand() % 600;
 	rect.w = 0;
 	rect.h = 0;
 
-	x_Threat = SCREEN_WIDTH;
-	y_Threat = 0;
-	v = 5;
+	v = 1;
 	texture = nullptr;
 }
 
 
-ThreatObject::~ThreatObject() { delete[] texture; }
+ThreatObject::~ThreatObject() { 
 
 
-void ThreatObject::moveControl()
+	if (texture != nullptr) {
+
+		SDL_DestroyTexture(texture);
+		texture = nullptr;
+	}
+}
+
+
+void ThreatObject::createThreat(int numOfThreat)
 {
-	x_Threat -= v;
-
-	rect = { x_Threat, y_Threat, ThreatWidth / 2, ThreatHeight / 2 };
-	if (x_Threat + SCREEN_WIDTH < 0) {
+	threatArray.clear();
+	for (int i = 0; i < numOfThreat; i++) {
 
 		x_Threat = SCREEN_WIDTH;
 		y_Threat = rand() % 600;
-		if (y_Threat > SCREEN_HEIGHT - 150) y_Threat = y_Threat = SCREEN_HEIGHT * 0.3;
+		rect = { x_Threat, y_Threat, ThreatWidth / 2, ThreatHeight / 2 };
+		threatArray.push_back(rect);
+	}
+}
+
+void ThreatObject::moveControl()
+{
+	for (SDL_Rect& rectOfThreat : threatArray) {
+		cout << "Threat = " << rectOfThreat.x << " " << rectOfThreat.y << endl;
+		rectOfThreat.x -= v;
+
+		if (rectOfThreat.x + SCREEN_WIDTH < 0) {
+
+			rectOfThreat.x = SCREEN_WIDTH;
+			rectOfThreat.y = rand() % 600;
+			if (rectOfThreat.y > SCREEN_HEIGHT - 150) rectOfThreat.y = SCREEN_HEIGHT * 0.3;
+		}
 	}
 }
 

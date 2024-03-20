@@ -16,7 +16,15 @@ TextObject::TextObject() {
 }
 
 
-TextObject::~TextObject() { delete[] texture; }
+TextObject::~TextObject() {
+
+
+	if (texture != nullptr) {
+
+		SDL_DestroyTexture(texture);
+		texture = nullptr;
+	}
+}
 
 void TextObject::SetText(string text) {content = text;}
 
