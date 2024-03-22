@@ -19,12 +19,10 @@ public:
 	ThreatObject();
 	~ThreatObject();
 
-	void createThreat(int numOfThreat);
 	void moveControl();
 
 private:
 
-	vector <SDL_Rect> threatArray;
 	int v;
 };
 

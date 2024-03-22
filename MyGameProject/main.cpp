@@ -6,7 +6,7 @@
 #include "TextObject.h"
 
 using namespace std;
-
+const int SCREEN_WIDTH = 900;
 
 void waitUntilKeyPressed()
 {
@@ -41,11 +41,12 @@ int main(int argc, char* argv[])
 	player.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\medium.png", renderer);
 	render(renderer, player.texture, player.rect);
 
-	ThreatObject threat;
-	threat.texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
-	threat.createThreat(3);
-	srand(static_cast<unsigned int>(time(nullptr)));
-	threat.rect.y = rand() % 600;
+	ThreatObject* troop = new ThreatObject[Threat_number];
+	for (int i = 0; i < Threat_number; i++) {
+
+		ThreatObject* threat = troop + i;
+		threat->texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
+	}
 
 	bool quit = false;
 	while (!quit)
@@ -78,13 +79,19 @@ int main(int argc, char* argv[])
 							}
 						}
 
-						cout << "Start render" << endl;
-						threat.moveControl();
-
 						SDL_RenderClear(renderer);
 						SDL_RenderCopy(renderer, background, NULL, NULL);
 						render(renderer, player.texture, player.rect);
-						render(renderer, threat.texture, threat.rect);
+
+						for (int i = 0; i < Threat_number; i++) {
+
+							cout << "i = " << i << endl;
+							ThreatObject* threat = troop + i;
+							cout << "Start render" << endl;
+							threat->moveControl();
+							render(renderer, threat->texture, threat->rect);
+							cout << "Threat: " << threat->rect.x << " " << threat->rect.y << endl;
+						}
 						SDL_RenderPresent(renderer);
 					}
 
@@ -97,7 +104,6 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	
 	return 0;
 }
 
