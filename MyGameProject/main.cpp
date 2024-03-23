@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
 					while (!gameQuit) {
 
 						Uint32 currentTime = SDL_GetTicks() / 1000;
-						// cout << "Time: " << currentTime << endl;
+						cout << "Time: " << currentTime << endl;
 						playMusic(backgroundMusic);
 						SDL_Event e;
 						while (SDL_PollEvent(&e)) {
@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
 							else if (e.type == SDL_KEYDOWN) {
 
 								player.HandleInputAction(e);
-								// cout << "Player: " << player.rect.x << " " << player.rect.y << endl;
+								cout << "Player: " << player.rect.x << " " << player.rect.y << endl;
 							}
 						}
 
@@ -99,9 +99,8 @@ int main(int argc, char* argv[]) {
 						for (int i = 0; i < Threat_number; i++) {
 
 							troop[i].moveControl(); 
-							// cout << "i = " << i << endl;
-							// ThreatObject* threat = troop + i; // troop khai bao o tren
-							// cout << "Start render" << endl;
+							cout << "i = " << i << endl;
+							cout << "Start render" << endl;
 
 							if (troop[i].rect.x == SCREEN_WIDTH) 
 								playChunk(troop[i].threatAppearance);
@@ -112,7 +111,7 @@ int main(int argc, char* argv[]) {
 
 
 							render(renderer, troop[i].texture, troop[i].rect);
-							// cout << "Threat: " << troop[i].rect.x << " " << troop[i].rect.y << endl;
+							cout << "Threat: " << troop[i].rect.x << " " << troop[i].rect.y << endl;
 
 							if (troop[i].rect.x + ThreatWidth <= 0) {
 								troop[i].rect.x = xPosList[rand() % SIZE_X];
