@@ -5,17 +5,43 @@ const int SCREEN_WIDTH = 1200;
 const int SCREEN_HEIGHT = 700;
 const int STEP = 50;
 
-MainObject::MainObject() {
+
+Point::Point() {
+
+	score = 0;
+	rect.x = 500;
+	rect.y = 3;
+	rect.w = 100;
+	rect.h = 50;
+	texture = nullptr;
+}
+
+Point::~Point() {
+
+	if (texture != nullptr) {
+
+		SDL_DestroyTexture(texture);
+		texture = nullptr;
+	}
+}
+
+
+void Point::updateTexture(SDL_Renderer* renderer) {
+
+	texture = renderText("Score: " + to_string(score), renderer);
+}
+
+void MainObject::initMain(SDL_Renderer* renderer) {
 
 	rect.x = 0;
 	rect.y = 0;
 	rect.w = Width;
 	rect.h = Height;
-	texture = nullptr;
+	texture = loadTexture("medium.png", renderer);
+	collisionSound = loadSound("Collision.wav");
 }
 
-
-MainObject::~MainObject() { 
+MainObject::~MainObject() {
 
 
 	if (texture != nullptr) {
@@ -23,6 +49,9 @@ MainObject::~MainObject() {
 		SDL_DestroyTexture(texture);
 		texture = nullptr;
 	}
+
+	Mix_FreeChunk(collisionSound);
+	collisionSound = nullptr;
 }
 
 
@@ -62,3 +91,5 @@ void MainObject::HandleInputAction(SDL_Event& events) {
 		
 	}
 }
+
+

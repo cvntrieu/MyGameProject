@@ -28,6 +28,13 @@ BaseObject::~BaseObject() {
 }
 
 
+void init() {
+
+    if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
+        cout << "SDL could not initialize! SDL Error: " << SDL_GetError() << endl;
+    }
+}
+
 SDL_Window* initWin() {
 
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
@@ -61,30 +68,6 @@ SDL_Renderer* initRen(SDL_Window* window) {
 }
 
 
-void initText(TTF_Font* fontOfText)
-{
-
-    if (TTF_Init() != 0) {
-        cout << "SDL_ttf could not initialize! SDL_ttf Error: " << TTF_GetError() << std::endl;
-    }
-    else {
-
-        fontOfText = TTF_OpenFont("FontsFree-Net-COMICATE.ttf", 20);
-        if (fontOfText == NULL) {
-            cout << "Failed to load font: " << TTF_GetError() << endl;
-        }
-        else {
-            cout << "Font Load success!";
-        }
-    }
-
-    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
-        logErrorAndExit("SDL_mixer could not initialize! SDL_mixer Error: %s\n",
-            Mix_GetError());
-    }
-}
-
-
 
 void logErrorAndExit(const char* msg, const char* error)
 {
@@ -97,6 +80,7 @@ void Quit(SDL_Window* window, SDL_Renderer* renderer)
 {
 
     Mix_Quit();
+    TTF_Quit();
     IMG_Quit();
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
@@ -141,82 +125,6 @@ bool CheckRectFocus(int x, int y, SDL_Rect rect) {
 }
 
 
-void ShowMenu(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font)
-{
-
-    SDL_Texture* menu = loadTexture("Menu.png", renderer);
-    if (menu == nullptr) {
-        cout << "Cannot create Menu! " << endl;
-    }
-    else {
-
-        SDL_Rect pos_arr;
-        pos_arr.x = 200;
-        pos_arr.y = 400;
-
-        TextObject text_menu;
-        text_menu.SetText("PLAY NOW !");
-        text_menu.SetColor(TextObject::WHITE_TEXT); // Kieu enum pr goi nhu nay !
-        text_menu.rect = { pos_arr.x, pos_arr.y, 700, 200 };
-
-        bool MouseSelected = 0; // Kiem tra viec focus 
-        bool mouse_quit = false;
-        SDL_Event mouse;
-        int mouseX = 0, mouseY = 0; // Toa do con chuot
-
-        while (!mouse_quit)
-        {
-            while (SDL_PollEvent(&mouse)) {
-                switch (mouse.type)
-                {
-                case SDL_QUIT: {
-                    mouse_quit = true;
-                    break;
-                }
-
-                case SDL_MOUSEMOTION: {
-                    // Bat su kien chuot di chuyen 
-                    mouseX = mouse.motion.x;
-                    mouseY = mouse.motion.y;
-
-                    if (CheckRectFocus(mouseX, mouseY, text_menu.rect)) {
-                        if (!MouseSelected) {
-                            MouseSelected = 1;
-                            text_menu.SetColor(TextObject::RED_TEXT);
-                        }
-                        else { // Neu chuot o ngoai vung
-                            MouseSelected = 0; // reset
-                            text_menu.SetColor(TextObject::WHITE_TEXT);
-                        }
-                    }
-                    break;
-                }
-
-                case SDL_MOUSEBUTTONDOWN: {
-
-                    mouseX = mouse.motion.x;
-                    mouseY = mouse.motion.y;
-
-                    if (CheckRectFocus(mouseX, mouseY, text_menu.rect)) {
-                        // Start playing ...
-                    }
-                    break;
-                }
-
-                case SDL_KEYDOWN: {
-                    if (mouse.key.keysym.sym == SDLK_ESCAPE) { // Nhan phim thoat X hoac esc
-                        Quit(window, renderer);
-                    }
-                }
-
-                }
-            }
-         SDL_RenderPresent(renderer);
-        }
-    }
-}
-
-
 void destroyTexture(SDL_Texture* texture)
 {
     SDL_DestroyTexture(texture);
@@ -248,45 +156,4 @@ bool collision(SDL_Rect& player, SDL_Rect& threat) // Note: Pass-by-reference
 return false;
 }
 
-// Background Music
-Mix_Music* loadMusic(const char* path) {
-
-    Mix_Music* music = Mix_LoadMUS(path); // mp3
-    if (music == nullptr) {
-
-        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
-            SDL_LOG_PRIORITY_ERROR,
-            "Could not load music! SDL_mixer Error: %s", Mix_GetError());
-    }
-    return music;
-}
-
-void playMusic(Mix_Music* music) { 
-
-    if (music == nullptr) return; // Ham ko lam gi them
-
-    if (Mix_PlayingMusic() == 0) Mix_PlayMusic(music, -1);
-    // Neu chua phat nhac thi phat tu dau va lap vo han (-1)
-    else if (Mix_PausedMusic() == 1) Mix_ResumeMusic();
-    // Neu nhac bi tam dung, ResumeMusic tiep tuc phat tu vi tri hien tai
-}
-
-// Abrupt Music (Short Sound and Collision)
-
-Mix_Chunk* loadSound(const char* path) {
-
-    Mix_Chunk* chunk = Mix_LoadWAV(path);
-    if (chunk == nullptr) {
-
-        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
-            SDL_LOG_PRIORITY_ERROR,
-            "Could not load sound! SDL_mixer Error: %s", Mix_GetError());
-    }
-    return chunk;
-}
-
-void playChunk(Mix_Chunk* chunk) {
-
-    if (chunk != nullptr) Mix_PlayChannel(-1, chunk, 0); // 0 = one time
-}
 

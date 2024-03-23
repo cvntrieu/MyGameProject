@@ -3,8 +3,8 @@
 #define THREAT_OBJECT_H
 
 #include "BaseObject.h"
-#define ThreatWidth  200 // 200
-#define ThreatHeight 131 // 131
+#define ThreatWidth  200 
+#define ThreatHeight 130
 
 using namespace std;
 
@@ -13,10 +13,9 @@ class ThreatObject : public BaseObject
 {
 public:
 
-	int x_Threat;
-	int y_Threat;
+	Mix_Chunk* threatAppearance;
 
-	ThreatObject();
+	void initThreat(SDL_Renderer* renderer);
 	~ThreatObject();
 
 	void moveControl();

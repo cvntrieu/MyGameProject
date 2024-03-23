@@ -4,9 +4,14 @@
 #include "MainObject.h"
 #include "ThreatObject.h"
 #include "TextObject.h"
+#include "MusicObject.h"
 
 using namespace std;
 const int SCREEN_WIDTH = 1200;
+const int yPosList[] = {10, 140, 270, 400};
+const int xPosList[] = {1200, 1503, 2103, 2403, 2700, 3000, 3201};
+const int SIZE_X = sizeof(xPosList) / sizeof(int);
+const int SIZE_Y = sizeof(yPosList) / sizeof(int);
 
 void waitUntilKeyPressed()
 {
@@ -18,16 +23,12 @@ void waitUntilKeyPressed()
 }
 
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
 
-	if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-		cout << "SDL could not initialize! SDL Error: " << SDL_GetError() << endl;
-		return 1;
-	}
-
-	TTF_Font* fontOfText = NULL;
-	initText(fontOfText);
+	init();
+	initMusic();
+	initText();
+	
 	SDL_Window* window = initWin();
 	SDL_Renderer* renderer = initRen(window);
 	SDL_Texture* intro = loadTexture("Menu.png", renderer);
@@ -38,26 +39,25 @@ int main(int argc, char* argv[])
 	SDL_RenderCopy(renderer, background, NULL, NULL);
 
 	MainObject player;
-	player.texture = loadTexture("medium.png", renderer);
+	player.initMain(renderer);
 	render(renderer, player.texture, player.rect);
 
-	ThreatObject* troop = new ThreatObject[Threat_number];
+	vector <ThreatObject> troop (Threat_number);
 	for (int i = 0; i < Threat_number; i++) {
 
-		ThreatObject* threat = troop + i;
-		threat->texture = loadTexture("Threat.png", renderer);
+		troop[i].initThreat(renderer);
+		troop[i].rect.y = yPosList[rand() % SIZE_Y];
 	}
 
 	Mix_Music* backgroundMusic = loadMusic("BackgroundMusic.mp3");
-	Mix_Chunk* collisionSound  = loadSound("Collision.wav");
 	Mix_Chunk* welcome = loadSound("Open.wav");
-	Mix_Chunk* threatAppearance = loadSound("Wind.wav");
 	Mix_Chunk* end = loadSound("GameOver.wav");
 
 	bool quit = false;
 	playChunk(welcome);
 	while (!quit)
 	{
+		Uint32 startTime = SDL_GetTicks() / 1000;
 		drawIntro(renderer, intro, playButton, playButtonRect);
 		SDL_RenderPresent(renderer);
 		SDL_Event event;
@@ -73,6 +73,10 @@ int main(int argc, char* argv[])
 
 					bool gameQuit = false;
 					while (!gameQuit) {
+
+						Uint32 currentTime = SDL_GetTicks() / 1000;
+						// cout << "Time: " << currentTime << endl;
+						playMusic(backgroundMusic);
 						SDL_Event e;
 						while (SDL_PollEvent(&e)) {
 
@@ -82,51 +86,64 @@ int main(int argc, char* argv[])
 							else if (e.type == SDL_KEYDOWN) {
 
 								player.HandleInputAction(e);
-								cout << "Player: " << player.rect.x << " " << player.rect.y << endl;
+								// cout << "Player: " << player.rect.x << " " << player.rect.y << endl;
 							}
 						}
 
 						SDL_RenderClear(renderer);
 						SDL_RenderCopy(renderer, background, NULL, NULL);
+						player.point.updateTexture(renderer);
+						render(renderer, player.point.texture, player.point.rect);
 						render(renderer, player.texture, player.rect);
 						
-
 						for (int i = 0; i < Threat_number; i++) {
 
-							cout << "i = " << i << endl;
-							ThreatObject* threat = troop + i; // troop khai bao o tren
-							// threat->texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
-							cout << "Start render" << endl;
-							threat->moveControl();
-							render(renderer, threat->texture, threat->rect);
-							cout << "Threat: " << threat->rect.x << " " << threat->rect.y << endl;
+							troop[i].moveControl(); 
+							// cout << "i = " << i << endl;
+							// ThreatObject* threat = troop + i; // troop khai bao o tren
+							// cout << "Start render" << endl;
 
-							bool isCollision = collision(player.rect, threat->rect);
-							if (isCollision) {
+							if (troop[i].rect.x == SCREEN_WIDTH) 
+								playChunk(troop[i].threatAppearance);
+							if (troop[i].rect.x + ThreatWidth <= 0) {
+								player.point.score++;
+								cout << "Get Point: " << player.point.score << endl;
+							}
+
+
+							render(renderer, troop[i].texture, troop[i].rect);
+							// cout << "Threat: " << troop[i].rect.x << " " << troop[i].rect.y << endl;
+
+							if (troop[i].rect.x + ThreatWidth <= 0) {
+								troop[i].rect.x = xPosList[rand() % SIZE_X];
+								troop[i].rect.y = yPosList[rand() % SIZE_Y];
+							}
+
+							bool isCollision = collision(player.rect, troop[i].rect);
+							if (isCollision || currentTime - startTime == 10) {
 								
 								// Show "Game Over!"
-								playChunk(collisionSound);
-								cout << "Game Over! " << endl;
-								SDL_Delay(3000);
+								playChunk(player.collisionSound);
+							    cout << "Game Over! " << endl;
+								SDL_Delay(2000);
 								gameQuit = true;
 								quit = true;
 							}
-							
 						}
 
-					 SDL_RenderPresent(renderer);
+					SDL_RenderPresent(renderer);
 					} // gameQuit == true
 				
+				player.~MainObject();
+				for (int i = 0; i < Threat_number; i++) troop[i].~ThreatObject();
+
 				if (welcome != nullptr) Mix_FreeChunk(welcome);
-				if (collisionSound != nullptr) Mix_FreeChunk(collisionSound);
-				if (threatAppearance != nullptr) Mix_FreeChunk(threatAppearance);
 				if (end != nullptr) Mix_FreeChunk(end);
 				if (backgroundMusic != nullptr) Mix_FreeMusic(backgroundMusic);
 
 				destroyTexture(intro);
 				destroyTexture(playButton);
 				destroyTexture(background);
-				delete[] troop;
 				Quit(window, renderer);
 				}
 			}

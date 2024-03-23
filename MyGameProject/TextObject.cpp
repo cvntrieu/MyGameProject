@@ -1,63 +1,38 @@
 
 #include "TextObject.h"
 
-TextObject::TextObject() {
+void initText() {
 
-	rect.x = 500;
-	rect.y = 500;
-	rect.w = 700;
-	rect.h = 200;
-	// Default white Color:
-	textColor.r = 255;
-	textColor.g = 255;
-	textColor.b = 255;
-	content = "";
-	texture = NULL;
+    if (TTF_Init() != 0) {
+       cout << "SDL_ttf could not initialize! SDL_ttf Error: " << TTF_GetError() << std::endl;
+    } 
 }
 
 
-TextObject::~TextObject() {
+SDL_Texture* renderText(string text, SDL_Renderer* renderer) {
 
-	if (texture != nullptr) {
-		SDL_DestroyTexture(texture);
-		texture = nullptr;
-	}
-}
+    TTF_Font* font = TTF_OpenFont("ARLRDBD.TTF", 100);
+    if (font == nullptr) {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
+            SDL_LOG_PRIORITY_ERROR,
+            "Load font %s", TTF_GetError());
+    }
 
-void TextObject::SetText(string text) {content = text;}
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, text.c_str(), {255, 0, 0, 255});
+    if (textSurface == nullptr) {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
+            SDL_LOG_PRIORITY_ERROR,
+            "Render text surface %s", TTF_GetError());
+        return nullptr;
+    }
 
-void TextObject::SetColor(int type)
-{
-	switch (type) {
-		 
-	case RED_TEXT:
-		 {
 
-			SDL_Color color = { 255, 0, 0 };
-			textColor = color;
-		 }
-	case BLUE_TEXT:
-		 {
-
-			SDL_Color color = { 0, 255, 255 };
-			textColor = color;
-		 }
-	case WHITE_TEXT:	
-		 {
-
-			SDL_Color color = { 255, 255, 255 }; // white
-			textColor = color;
-		 }
-	}
-}
-
-void TextObject::createText(TTF_Font* font, SDL_Renderer* renderer)
-{
-
-	SDL_Surface* surface = TTF_RenderText_Solid(font, content.c_str(), textColor);
-	texture = SDL_CreateTextureFromSurface(renderer, surface);
-	SDL_FreeSurface(surface);
-
-	SDL_RenderCopy(renderer, texture, NULL, &rect);
-	SDL_RenderPresent(renderer);
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, textSurface);
+    if (texture == nullptr) {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
+            SDL_LOG_PRIORITY_ERROR,
+            "Create texture from text %s", SDL_GetError());
+    }
+    SDL_FreeSurface(textSurface);
+    return texture;
 }
