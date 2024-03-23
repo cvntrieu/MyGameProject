@@ -18,9 +18,7 @@ TextObject::TextObject() {
 
 TextObject::~TextObject() {
 
-
 	if (texture != nullptr) {
-
 		SDL_DestroyTexture(texture);
 		texture = nullptr;
 	}

@@ -2,7 +2,6 @@
 #ifndef Painter_H
 #define Painter_H
 
-
 #include <SDL.h>
 #include <vector>
 #include <string>
@@ -37,5 +36,6 @@ void drawIntro(SDL_Renderer* renderer, SDL_Texture* intro, SDL_Texture* button, 
 // Kiem tra toa do 1 diem voi 1 rect cho truoc
 bool CheckRectFocus(int x, int y, SDL_Rect rect);
 void destroyTexture(SDL_Texture* texture);
+bool collision(SDL_Rect& player, SDL_Rect& threat);
 
 #endif

@@ -86,18 +86,34 @@ int main(int argc, char* argv[])
 						for (int i = 0; i < Threat_number; i++) {
 
 							cout << "i = " << i << endl;
-							ThreatObject* threat = troop + i;
+							ThreatObject* threat = troop + i; // troop khai bao o tren
+							// threat->texture = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Threat.png", renderer);
 							cout << "Start render" << endl;
 							threat->moveControl();
 							render(renderer, threat->texture, threat->rect);
 							cout << "Threat: " << threat->rect.x << " " << threat->rect.y << endl;
+							
+							bool isCollision = collision(player.rect, threat->rect);
+							if (isCollision) {
+								
+								// Show "Game Over!"
+								cout << "Game Over! " << endl;
+								destroyTexture(intro);
+								destroyTexture(playButton);
+								destroyTexture(background);
+								delete[] troop;
+								Quit(window, renderer);
+							}
+							
 						}
+
 						SDL_RenderPresent(renderer);
-					}
+					} // gameQuit == true
 
 				destroyTexture(intro);
 				destroyTexture(playButton);
 				destroyTexture(background);
+				delete[] troop;
 				Quit(window, renderer);
 				}
 			}
