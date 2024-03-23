@@ -3,8 +3,8 @@
 
 
 #include "BaseObject.h"
-#define Width  100
-#define Height 69
+#define Width  100 // 100
+#define Height 69 // 69
 const int Threat_number = 3;
 
 class MainObject : public BaseObject

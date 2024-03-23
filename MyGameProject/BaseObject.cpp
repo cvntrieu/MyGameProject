@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const int SCREEN_WIDTH = 900;
+const int SCREEN_WIDTH = 1200;
 const int SCREEN_HEIGHT = 700;
 const char* WINDOW_TITLE = "The Defender !";
 
@@ -69,13 +69,18 @@ void initText(TTF_Font* fontOfText)
     }
     else {
 
-        fontOfText = TTF_OpenFont("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\FontsFree-Net-COMICATE.ttf", 20);
+        fontOfText = TTF_OpenFont("FontsFree-Net-COMICATE.ttf", 20);
         if (fontOfText == NULL) {
             cout << "Failed to load font: " << TTF_GetError() << endl;
         }
         else {
             cout << "Font Load success!";
         }
+    }
+
+    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+        logErrorAndExit("SDL_mixer could not initialize! SDL_mixer Error: %s\n",
+            Mix_GetError());
     }
 }
 
@@ -91,6 +96,7 @@ void logErrorAndExit(const char* msg, const char* error)
 void Quit(SDL_Window* window, SDL_Renderer* renderer)
 {
 
+    Mix_Quit();
     IMG_Quit();
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
@@ -116,10 +122,6 @@ void render(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect rect) {
     SDL_RenderCopy(renderer, texture, NULL, &rect);
 }
 
-int ShowMenu(SDL_Texture* des, TTF_Font* font)
-{
-    return 0;
-}
 
 void drawIntro(SDL_Renderer* renderer, SDL_Texture* intro, SDL_Texture* button, SDL_Rect rect)
 {
@@ -142,7 +144,7 @@ bool CheckRectFocus(int x, int y, SDL_Rect rect) {
 void ShowMenu(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font)
 {
 
-    SDL_Texture* menu = loadTexture("C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\Menu.png", renderer);
+    SDL_Texture* menu = loadTexture("Menu.png", renderer);
     if (menu == nullptr) {
         cout << "Cannot create Menu! " << endl;
     }
@@ -223,10 +225,10 @@ void destroyTexture(SDL_Texture* texture)
 
 bool collision(SDL_Rect& player, SDL_Rect& threat) // Note: Pass-by-reference
 {
-    int left1  = player.x, right1  = player.x + player.w;
+    int left1 = player.x * 1.15,  right1 =  player.x + player.w * 0.85;
     int top1   = player.y, bottom1 = player.y + player.h;
     
-    int left2  = threat.x, right2  = threat.x + threat.w;
+    int left2  = threat.x * 1.15, right2  = threat.x + threat.w * 0.85;
     int top2   = threat.y, bottom2 = threat.y + threat.h;
 
 
@@ -246,5 +248,45 @@ bool collision(SDL_Rect& player, SDL_Rect& threat) // Note: Pass-by-reference
 return false;
 }
 
+// Background Music
+Mix_Music* loadMusic(const char* path) {
 
+    Mix_Music* music = Mix_LoadMUS(path); // mp3
+    if (music == nullptr) {
+
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
+            SDL_LOG_PRIORITY_ERROR,
+            "Could not load music! SDL_mixer Error: %s", Mix_GetError());
+    }
+    return music;
+}
+
+void playMusic(Mix_Music* music) { 
+
+    if (music == nullptr) return; // Ham ko lam gi them
+
+    if (Mix_PlayingMusic() == 0) Mix_PlayMusic(music, -1);
+    // Neu chua phat nhac thi phat tu dau va lap vo han (-1)
+    else if (Mix_PausedMusic() == 1) Mix_ResumeMusic();
+    // Neu nhac bi tam dung, ResumeMusic tiep tuc phat tu vi tri hien tai
+}
+
+// Abrupt Music (Short Sound and Collision)
+
+Mix_Chunk* loadSound(const char* path) {
+
+    Mix_Chunk* chunk = Mix_LoadWAV(path);
+    if (chunk == nullptr) {
+
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
+            SDL_LOG_PRIORITY_ERROR,
+            "Could not load sound! SDL_mixer Error: %s", Mix_GetError());
+    }
+    return chunk;
+}
+
+void playChunk(Mix_Chunk* chunk) {
+
+    if (chunk != nullptr) Mix_PlayChannel(-1, chunk, 0); // 0 = one time
+}
 

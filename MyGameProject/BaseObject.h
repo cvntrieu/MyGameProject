@@ -7,6 +7,7 @@
 #include <string>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
+#include <SDL_mixer.h>
 #include <iostream>
 
 using namespace std;
@@ -37,5 +38,12 @@ void drawIntro(SDL_Renderer* renderer, SDL_Texture* intro, SDL_Texture* button, 
 bool CheckRectFocus(int x, int y, SDL_Rect rect);
 void destroyTexture(SDL_Texture* texture);
 bool collision(SDL_Rect& player, SDL_Rect& threat);
+
+// Music and sound:
+Mix_Music* loadMusic(const char* path);
+void playMusic(Mix_Music* music);
+
+Mix_Chunk* loadSound(const char* path);
+void playChunk(Mix_Chunk* chunk);
 
 #endif

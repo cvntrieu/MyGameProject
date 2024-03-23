@@ -1,7 +1,7 @@
 
 #include "ThreatObject.h"
 
-const int SCREEN_WIDTH = 900;
+const int SCREEN_WIDTH = 1200;
 const int SCREEN_HEIGHT = 700;
 
 ThreatObject::ThreatObject(){

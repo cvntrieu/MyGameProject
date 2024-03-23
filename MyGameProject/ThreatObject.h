@@ -3,8 +3,8 @@
 #define THREAT_OBJECT_H
 
 #include "BaseObject.h"
-#define ThreatWidth  200
-#define ThreatHeight 131
+#define ThreatWidth  200 // 200
+#define ThreatHeight 131 // 131
 
 using namespace std;
 
