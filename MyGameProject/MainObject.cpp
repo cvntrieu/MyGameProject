@@ -2,10 +2,6 @@
 #include "MainObject.h"
 #include "Record.h"
 
-const int SCREEN_WIDTH = 1200;
-const int SCREEN_HEIGHT = 700;
-const int STEP = 50;
-
 
 Point::Point() {
 
@@ -49,8 +45,8 @@ void Point::updateTexture(SDL_Renderer* renderer) {
 
 void MainObject::initMain(SDL_Renderer* renderer) {
 
-	rect.x = 1;
-	rect.y = 1;
+	rect.x = 0;
+	rect.y = 0;
 	rect.w = Width;
 	rect.h = Height;
 	texture = loadTexture("medium.png", renderer);

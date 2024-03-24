@@ -7,40 +7,8 @@
       "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\ThreatObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MainObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\Record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\Record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MainObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MusicObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MusicObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MenuObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\BaseObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\BaseObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\CommonFuctions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\CommonFuctions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -51,16 +19,56 @@
       "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\TextObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\TextObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\TextObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\BaseObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\CommonFunctions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\CommonFunctions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MenuObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MusicObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MusicObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\Record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\TextObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\TextObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\ThreatObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MainObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\Record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MusicObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MusicObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MenuObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\MainObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9AFC56B9-CC19-4063-9089-B56E7A46D4A7}|MyGameProject\\MyGameProject.vcxproj|solutionrelative:MyGameProject\\BaseObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -74,47 +82,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Record.cpp",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.cpp",
-              "RelativeDocumentMoniker": "MyGameProject\\Record.cpp",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.cpp",
-              "RelativeToolTip": "MyGameProject\\Record.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T14:16:12.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Record.h",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.h",
-              "RelativeDocumentMoniker": "MyGameProject\\Record.h",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.h",
-              "RelativeToolTip": "MyGameProject\\Record.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-24T13:47:18.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainObject.h",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.h",
-              "RelativeDocumentMoniker": "MyGameProject\\MainObject.h",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.h",
-              "RelativeToolTip": "MyGameProject\\MainObject.h",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABUAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-03T08:23:15.682Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -123,66 +92,27 @@
               "RelativeDocumentMoniker": "MyGameProject\\main.cpp",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\main.cpp",
               "RelativeToolTip": "MyGameProject\\main.cpp",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAGAAAAAcAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-02T13:22:18.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BaseObject.h",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.h",
-              "RelativeDocumentMoniker": "MyGameProject\\BaseObject.h",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.h",
-              "RelativeToolTip": "MyGameProject\\BaseObject.h",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAACIAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-02T14:17:17.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseObject.cpp",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.cpp",
-              "RelativeDocumentMoniker": "MyGameProject\\BaseObject.cpp",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.cpp",
-              "RelativeToolTip": "MyGameProject\\BaseObject.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAXAAAA",
+              "DocumentIndex": 6,
+              "Title": "MenuObject.cpp",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.cpp",
+              "RelativeDocumentMoniker": "MyGameProject\\MenuObject.cpp",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.cpp",
+              "RelativeToolTip": "MyGameProject\\MenuObject.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-02T14:16:49.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainObject.cpp",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.cpp",
-              "RelativeDocumentMoniker": "MyGameProject\\MainObject.cpp",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.cpp",
-              "RelativeToolTip": "MyGameProject\\MainObject.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-03T08:37:55.558Z",
+              "WhenOpened": "2024-03-24T07:25:40.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MenuObject.h",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.h",
-              "RelativeDocumentMoniker": "MyGameProject\\MenuObject.h",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.h",
-              "RelativeToolTip": "MyGameProject\\MenuObject.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-24T07:21:11.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "MusicObject.cpp",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MusicObject.cpp",
               "RelativeDocumentMoniker": "MyGameProject\\MusicObject.cpp",
@@ -195,20 +125,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ThreatObject.cpp",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.cpp",
-              "RelativeDocumentMoniker": "MyGameProject\\ThreatObject.cpp",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.cpp",
-              "RelativeToolTip": "MyGameProject\\ThreatObject.cpp",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACIAAAAwAAAA",
+              "DocumentIndex": 8,
+              "Title": "Record.cpp",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.cpp",
+              "RelativeDocumentMoniker": "MyGameProject\\Record.cpp",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.cpp",
+              "RelativeToolTip": "MyGameProject\\Record.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-05T09:20:17.024Z",
+              "WhenOpened": "2024-03-24T14:16:12.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
+              "Title": "CommonFunctions.cpp",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\CommonFunctions.cpp",
+              "RelativeDocumentMoniker": "MyGameProject\\CommonFunctions.cpp",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\CommonFunctions.cpp",
+              "RelativeToolTip": "MyGameProject\\CommonFunctions.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-24T15:23:41.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseObject.cpp",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.cpp",
+              "RelativeDocumentMoniker": "MyGameProject\\BaseObject.cpp",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.cpp",
+              "RelativeToolTip": "MyGameProject\\BaseObject.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-02T14:16:49.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TextObject.h",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\TextObject.h",
               "RelativeDocumentMoniker": "MyGameProject\\TextObject.h",
@@ -221,7 +177,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
+              "Title": "ThreatObject.h",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.h",
+              "RelativeDocumentMoniker": "MyGameProject\\ThreatObject.h",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.h",
+              "RelativeToolTip": "MyGameProject\\ThreatObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-05T09:05:30.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommonFuctions.h",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\CommonFuctions.h",
+              "RelativeDocumentMoniker": "MyGameProject\\CommonFuctions.h",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\CommonFuctions.h",
+              "RelativeToolTip": "MyGameProject\\CommonFuctions.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-24T15:21:05.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "TextObject.cpp",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\TextObject.cpp",
               "RelativeDocumentMoniker": "MyGameProject\\TextObject.cpp",
@@ -235,31 +217,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ThreatObject.h",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.h",
-              "RelativeDocumentMoniker": "MyGameProject\\ThreatObject.h",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.h",
-              "RelativeToolTip": "MyGameProject\\ThreatObject.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Title": "ThreatObject.cpp",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.cpp",
+              "RelativeDocumentMoniker": "MyGameProject\\ThreatObject.cpp",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\ThreatObject.cpp",
+              "RelativeToolTip": "MyGameProject\\ThreatObject.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-05T09:20:17.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainObject.cpp",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.cpp",
+              "RelativeDocumentMoniker": "MyGameProject\\MainObject.cpp",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.cpp",
+              "RelativeToolTip": "MyGameProject\\MainObject.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-03T08:37:55.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Record.h",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.h",
+              "RelativeDocumentMoniker": "MyGameProject\\Record.h",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Record.h",
+              "RelativeToolTip": "MyGameProject\\Record.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-05T09:05:30.913Z",
+              "WhenOpened": "2024-03-24T13:47:18.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "MenuObject.cpp",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.cpp",
-              "RelativeDocumentMoniker": "MyGameProject\\MenuObject.cpp",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.cpp",
-              "RelativeToolTip": "MyGameProject\\MenuObject.cpp",
-              "ViewState": "AQIAABwAAAAAAAAAAAAAADQAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T07:25:40.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "MusicObject.h",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MusicObject.h",
               "RelativeDocumentMoniker": "MyGameProject\\MusicObject.h",
@@ -267,11 +263,51 @@
               "RelativeToolTip": "MyGameProject\\MusicObject.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-23T13:00:21.153Z"
+              "WhenOpened": "2024-03-23T13:00:21.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MenuObject.h",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.h",
+              "RelativeDocumentMoniker": "MyGameProject\\MenuObject.h",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MenuObject.h",
+              "RelativeToolTip": "MyGameProject\\MenuObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-24T07:21:11.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "MainObject.h",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.h",
+              "RelativeDocumentMoniker": "MyGameProject\\MainObject.h",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\MainObject.h",
+              "RelativeToolTip": "MyGameProject\\MainObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-03T08:23:15.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BaseObject.h",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.h",
+              "RelativeDocumentMoniker": "MyGameProject\\BaseObject.h",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\BaseObject.h",
+              "RelativeToolTip": "MyGameProject\\BaseObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-02T14:17:17.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\MyGameProject\\MyGameProject\\Source.cpp",
               "RelativeDocumentMoniker": "MyGameProject\\Source.cpp",

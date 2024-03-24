@@ -2,9 +2,6 @@
 #include "ThreatObject.h"
 #include "MusicObject.h"
 
-const int SCREEN_WIDTH = 1200;
-const int SCREEN_HEIGHT = 700;
-
 void ThreatObject::initThreat(SDL_Renderer* renderer){
 
 	rect.x = SCREEN_WIDTH + v;

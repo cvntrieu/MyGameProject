@@ -6,10 +6,10 @@
 #include "MusicObject.h"
 #include "MenuObject.h"
 #include "Record.h"
+#include "CommonFuctions.h"
 
 using namespace std;
 
-const int SCREEN_WIDTH = 1200;
 const int yPosList[] = {10, 140, 270, 400};
 const int xPosList[] = {1200, 1503, 2103, 2403, 2700, 3000, 3201, 5001};
 const int SIZE_X = sizeof(xPosList) / sizeof(int);
