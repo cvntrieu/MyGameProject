@@ -32,18 +32,7 @@ ThreatObject::~ThreatObject() {
 }
 
 
-void ThreatObject::moveControl()
-{
-	// x_Threat -= v;
-	rect.x -= v;
-	// rect = { x_Threat, y_Threat, ThreatWidth / 2, ThreatHeight / 2 };
-	/*if (x_Threat + SCREEN_WIDTH < 0) {
-
-		x_Threat = SCREEN_WIDTH + rand() % SCREEN_WIDTH;
-		y_Threat = rand() % 600;
-		if (y_Threat > SCREEN_HEIGHT - 150) y_Threat = y_Threat = SCREEN_HEIGHT * 0.3;
-	}*/
-}
+void ThreatObject::moveControl() { rect.x -= v; }
 
 
 

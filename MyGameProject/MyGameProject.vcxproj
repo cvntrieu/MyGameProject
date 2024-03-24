@@ -148,6 +148,7 @@
     </ClCompile>
     <ClCompile Include="MenuObject.cpp" />
     <ClCompile Include="MusicObject.cpp" />
+    <ClCompile Include="Record.cpp" />
     <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="ThreatObject.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@
     </ClInclude>
     <ClInclude Include="MenuObject.h" />
     <ClInclude Include="MusicObject.h" />
+    <ClInclude Include="Record.h" />
     <ClInclude Include="TextObject.h" />
     <ClInclude Include="ThreatObject.h" />
   </ItemGroup>

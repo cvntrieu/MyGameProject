@@ -47,7 +47,7 @@ void Menu::CheckGameOver() {
 	int x, y;
 	SDL_GetMouseState(&x, &y);
 	cout << "Over: " << x << " " << y << endl;
-	if (405 <= x && x <= 740 && 440 <= y <= 520) {
+	if (405 <= x && x <= 740 && 440 <= y && y <= 520) {
 		status = PLAY;
 	}
 	else if (420 <= x && x <= 700 && 555 <= y && y <= 630) {

@@ -1,5 +1,6 @@
 
 #include "MainObject.h"
+#include "Record.h"
 
 const int SCREEN_WIDTH = 1200;
 const int SCREEN_HEIGHT = 700;
@@ -9,11 +10,18 @@ const int STEP = 50;
 Point::Point() {
 
 	score = 0;
+	chance = 3;
+	recordPoint = loadRecord();
+
 	rect.x = 500;
 	rect.y = 3;
 	rect.w = 200;
 	rect.h = 50;
 	texture = nullptr;
+	chanceTexture = nullptr;
+	recordTexture = nullptr;
+	chanceRect = { 100, 3, 50, 50 };
+	recordRect = { SCREEN_WIDTH * 3 / 4, 3, 200, 50 };
 }
 
 Point::~Point() {
@@ -23,18 +31,26 @@ Point::~Point() {
 		SDL_DestroyTexture(texture);
 		texture = nullptr;
 	}
+
+	if (chanceTexture != nullptr) {
+
+		SDL_DestroyTexture(chanceTexture);
+		chanceTexture = nullptr;
+	}
 }
 
 
 void Point::updateTexture(SDL_Renderer* renderer) {
 
 	texture = renderText("Score: " + to_string(score), renderer);
+	chanceTexture = renderText(" " + to_string(chance), renderer);
+	recordTexture = renderText("Top 1 : " + to_string(recordPoint), renderer);
 }
 
 void MainObject::initMain(SDL_Renderer* renderer) {
 
-	rect.x = 0;
-	rect.y = 0;
+	rect.x = 1;
+	rect.y = 1;
 	rect.w = Width;
 	rect.h = Height;
 	texture = loadTexture("medium.png", renderer);

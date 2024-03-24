@@ -15,7 +15,11 @@ class Point : public BaseObject {
 
 public:
 
-	int score;
+	int score, chance, recordPoint;
+	SDL_Texture* chanceTexture;
+	SDL_Texture* recordTexture;
+	SDL_Rect chanceRect;
+	SDL_Rect recordRect;
 
 	Point();
 	~Point();

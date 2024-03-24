@@ -35,5 +35,4 @@ void destroyTexture(SDL_Texture* texture);
 bool collision(SDL_Rect& player, SDL_Rect& threat);
 
 
-
 #endif
