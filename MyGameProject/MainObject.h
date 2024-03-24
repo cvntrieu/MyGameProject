@@ -6,8 +6,8 @@
 #include "TextObject.h"
 #include "MusicObject.h"
 
-#define Width  100 
-#define Height 69 
+#define Width  180
+#define Height 110
 const int Threat_number = 3;
 
 

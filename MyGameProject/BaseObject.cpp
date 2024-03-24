@@ -107,14 +107,6 @@ void render(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect rect) {
 }
 
 
-void drawIntro(SDL_Renderer* renderer, SDL_Texture* intro, SDL_Texture* button, SDL_Rect rect)
-{
-
-    SDL_RenderCopy(renderer, intro, NULL, NULL);
-    SDL_RenderCopy(renderer, button, NULL, &rect);
-}
-
-
 
 bool CheckRectFocus(int x, int y, SDL_Rect rect) {
 

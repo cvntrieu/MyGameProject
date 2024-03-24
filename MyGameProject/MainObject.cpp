@@ -11,7 +11,7 @@ Point::Point() {
 	score = 0;
 	rect.x = 500;
 	rect.y = 3;
-	rect.w = 100;
+	rect.w = 200;
 	rect.h = 50;
 	texture = nullptr;
 }
