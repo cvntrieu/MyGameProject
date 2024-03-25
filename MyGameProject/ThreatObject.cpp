@@ -1,6 +1,7 @@
 
 #include "ThreatObject.h"
 #include "MusicObject.h"
+// const int SCREEN_WIDTH = 1200;
 
 void ThreatObject::initThreat(SDL_Renderer* renderer){
 
@@ -15,7 +16,7 @@ void ThreatObject::initThreat(SDL_Renderer* renderer){
 }
 
 
-ThreatObject::~ThreatObject() { 
+ThreatObject::~ThreatObject() {
 
 
 	if (texture != nullptr) {

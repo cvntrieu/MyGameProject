@@ -10,10 +10,10 @@
 
 using namespace std;
 
-const int yPosList[] = {10, 140, 270, 400};
-const int xPosList[] = {1200, 1503, 2103, 2403, 2700, 3000, 3201, 5001};
-const int SIZE_X = sizeof(xPosList) / sizeof(int);
-const int SIZE_Y = sizeof(yPosList) / sizeof(int);
+//const int yPosList[] = {10, 140, 270, 400};
+//const int xPosList[] = {1200, 1503, 2103, 2403, 2700, 3000, 3201, 5001};
+//const int SIZE_X = sizeof(xPosList) / sizeof(int);
+//const int SIZE_Y = sizeof(yPosList) / sizeof(int);
 
 void waitUntilKeyPressed()
 {
@@ -178,7 +178,6 @@ int main(int argc, char* argv[]) {
 											
 											SDL_Delay(2000);
 											for (int i = 0; i < Threat_number; i++) troop[i].initThreat(renderer);
-											Mix_HaltMusic();
 											playChunk(end);
 											// Reset lai vi tri cho threat chuan bi lan choi moi
 											if (player.point.score > player.point.recordPoint) {

@@ -3,7 +3,7 @@
 #define MENU_H
 #include "BaseObject.h"
 
-const int MENU = 0, HELP = 1, PLAY = 2, EXIT = 3;
+// const int MENU = 0, HELP = 1, PLAY = 2, EXIT = 3;
 
 class Menu : public BaseObject {
 
