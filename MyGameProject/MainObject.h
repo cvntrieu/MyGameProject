@@ -38,7 +38,7 @@ public:
 
 	void initMain(SDL_Renderer* renderer);
 	~MainObject();
-
+	void reset(SDL_Renderer* renderer);
 	void HandleInputAction(SDL_Event& events);
 };
 

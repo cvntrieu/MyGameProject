@@ -48,6 +48,13 @@ void Point::updateTexture(SDL_Renderer* renderer) {
 	}
 }
 
+void MainObject::reset(SDL_Renderer* renderer) {
+
+	initMain(renderer); // Reset lai vi tri player
+	point.score = 0; // Reset score cho lan choi tiep theo
+	point.chance = 3; // Reset Chance
+}
+
 void MainObject::initMain(SDL_Renderer* renderer) {
 
 	rect.x = 0;

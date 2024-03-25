@@ -213,7 +213,7 @@ int main(int argc, char* argv[]) {
 								SDL_Delay(20); // De CPU do lag, tranh bi giat man hinh
 							} // gameQuit == true
 
-							player.initMain(renderer); // Reset lai vi tri player
+							player.reset(renderer);
 
 							bool overQuit = false;
 							while (!overQuit) {
@@ -243,7 +243,6 @@ int main(int argc, char* argv[]) {
 										else if (menu.status == PLAY) {
 											// cout << "Play after Over! " << endl;
 											overQuit = true;
-											player.point.chance = 3;
 											cout << "READY! " << endl;
 											break;
 										}
