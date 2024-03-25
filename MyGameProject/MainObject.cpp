@@ -40,7 +40,12 @@ void Point::updateTexture(SDL_Renderer* renderer) {
 
 	texture = renderText("Score: " + to_string(score), renderer);
 	chanceTexture = renderText(" " + to_string(chance), renderer);
-	recordTexture = renderText("Top 1 : " + to_string(recordPoint), renderer);
+	if (score > recordPoint) {
+		recordTexture = renderText("Top 1 : " + to_string(score), renderer);
+	}
+	else {
+		recordTexture = renderText("Top 1 : " + to_string(recordPoint), renderer);
+	}
 }
 
 void MainObject::initMain(SDL_Renderer* renderer) {

@@ -3,7 +3,7 @@
 
 void Menu::initMenu(SDL_Renderer* renderer) {
 
-	status = 0;
+	status = MENU;
 	texture = loadTexture("OfficialMenu1.png", renderer);
 	helpTexture = loadTexture("OfficialMenu2.png", renderer);
 	gameOverTexture = loadTexture("OfficialMenu3.0.png", renderer);

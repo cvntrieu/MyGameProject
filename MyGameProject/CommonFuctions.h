@@ -9,6 +9,8 @@
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 #define ThreatWidth  170 
 #define ThreatHeight 100

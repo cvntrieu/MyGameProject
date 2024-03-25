@@ -49,11 +49,11 @@ int main(int argc, char* argv[]) {
 	render(renderer, player.texture, player.rect);
 
 	vector <ThreatObject> troop (Threat_number);
-	for (int i = 0; i < Threat_number; i++) {
+	for (int i = 0; i < Threat_number; i++) { troop[i].initThreat(renderer); }
 
-		troop[i].initThreat(renderer);
-		troop[i].rect.y = yPosList[rand() % SIZE_Y];
-	}
+	ThreatObject gift;
+	gift.initThreat(renderer);
+	gift.texture = loadTexture("Gift.png", renderer);
 
 	Mix_Music* backgroundMusic = loadMusic("BackgroundMusic.mp3");
 	Mix_Chunk* welcome = loadSound("Open.wav");
@@ -140,6 +140,7 @@ int main(int argc, char* argv[]) {
 									}
 								}
 
+								// Player 
 								SDL_RenderClear(renderer);
 								SDL_RenderCopy(renderer, background, NULL, NULL);
 								player.point.updateTexture(renderer); 
@@ -150,6 +151,20 @@ int main(int argc, char* argv[]) {
 								render(renderer, player.texture, player.rect);
 								render(renderer, heart, heartRect);
 
+								// Gift
+								gift.moveControl();
+								cout << "Gift: " << gift.rect.x << " " << gift.rect.y << endl;
+								render(renderer, gift.texture, gift.rect);
+								if (gift.rect.x <= 0) {
+									gift.rect.x = 10000;
+								}
+								bool getGift = collision(player.rect, gift.rect);
+								if (getGift) {
+									gift.rect.x = 10000;
+									player.point.score += 5;
+								}
+
+								// Threat
 								for (int i = 0; i < Threat_number; i++) {
 
 									troop[i].moveControl();
@@ -165,7 +180,6 @@ int main(int argc, char* argv[]) {
 										troop[i].rect.y = yPosList[rand() % SIZE_Y];
 										cout << "Get Point: " << player.point.score << endl;
 									}
-
 
 									render(renderer, troop[i].texture, troop[i].rect);
 									cout << "Threat: " << troop[i].rect.x << " " << troop[i].rect.y << endl;
@@ -239,13 +253,13 @@ int main(int argc, char* argv[]) {
 
 						} // again?
 					} // status == play (*) ============================================================================
-
 			} // mouse
 		} // pollEvent
 	} // quit
 
 	player.~MainObject();
 	for (int i = 0; i < Threat_number; i++) troop[i].~ThreatObject();
+	gift.~ThreatObject();
 
 	if (welcome != nullptr) Mix_FreeChunk(welcome);
 	if (end != nullptr) Mix_FreeChunk(end);
