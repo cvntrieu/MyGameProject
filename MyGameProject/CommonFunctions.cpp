@@ -95,28 +95,3 @@ void destroyTexture(SDL_Texture* texture)
     SDL_DestroyTexture(texture);
     texture = NULL;
 }
-
-bool collision(SDL_Rect& player, SDL_Rect& threat) // Note: Pass-by-reference
-{
-    int left1 = player.x * 1.15, right1 = player.x + player.w * 0.85;
-    int top1 = player.y, bottom1 = player.y + player.h;
-
-    int left2 = threat.x * 1.15, right2 = threat.x + threat.w * 0.85;
-    int top2 = threat.y, bottom2 = threat.y + threat.h;
-
-
-    if (left2 < left1 && left1 < right2 && top2 < top1 && top1 < bottom2) {
-        return true;
-    }
-    if (left1 < left2 && left2 < right1 && top2 < top1 && top1 < bottom2) {
-        return true;
-    }
-    if (left2 < left1 && left1 < right2 && top1 < top2 && top2 < bottom1) {
-        return true;
-    }
-    if (left1 < left2 && left2 < right1 && top1 < top2 && top2 < bottom1) {
-        return true;
-    }
-
-    return false;
-}

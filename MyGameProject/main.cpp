@@ -153,7 +153,7 @@ int main(int argc, char* argv[]) {
 								if (gift.rect.x <= 0) {
 									gift.rect.x = 10000;
 								}
-								bool getGift = collision(player.rect, gift.rect);
+								bool getGift = player.collision(gift.rect);
 								if (getGift) {
 									gift.rect.x = 10000;
 									player.point.score += 5;
@@ -179,7 +179,7 @@ int main(int argc, char* argv[]) {
 									render(renderer, troop[i].texture, troop[i].rect);
 									cout << "Threat: " << troop[i].rect.x << " " << troop[i].rect.y << endl;
 
-									bool isCollision = collision(player.rect, troop[i].rect);
+									bool isCollision = player.collision(troop[i].rect);
 									if (isCollision) {
 
 										playChunk(player.collisionSound);

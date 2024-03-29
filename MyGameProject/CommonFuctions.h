@@ -40,6 +40,5 @@ SDL_Texture* loadTexture(const char* filename, SDL_Renderer* renderer);
 void render(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect rect);
 
 void destroyTexture(SDL_Texture* texture);
-bool collision(SDL_Rect& player, SDL_Rect& threat);
 
 #endif 

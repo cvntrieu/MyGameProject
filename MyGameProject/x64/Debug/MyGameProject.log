@@ -1,3 +1,15 @@
-﻿  MainObject.cpp
-x64\Debug\MainObject.obj : warning LNK4042: object specified more than once; extras ignored
+﻿  BaseObject.cpp
+  CommonFunctions.cpp
+  MainObject.cpp
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp(121,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp(121,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp(124,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp(124,38): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  MainObject.h
+  MenuObject.cpp
+  MusicObject.cpp
+  TextObject.cpp
+  ThreatObject.cpp
+  main.cpp
+  Generating Code...
   MyGameProject.vcxproj -> C:\Users\ADMIN\source\repos\MyGameProject\x64\Debug\MyGameProject.exe

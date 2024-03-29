@@ -33,6 +33,7 @@ public:
 	~MainObject();
 	void reset(SDL_Renderer* renderer);
 	void HandleInputAction(SDL_Event& events);
+	bool collision(SDL_Rect& threat);
 };
 
 #endif
