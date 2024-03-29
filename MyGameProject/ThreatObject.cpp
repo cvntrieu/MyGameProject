@@ -3,9 +3,7 @@
 #include "MusicObject.h"
 #include <ctime>
 #include <cstdlib>
-// const int SCREEN_WIDTH = 1200;
 
-// srand(time(nullptr));
 
 void ThreatObject::initThreat(SDL_Renderer* renderer){
 
@@ -14,7 +12,7 @@ void ThreatObject::initThreat(SDL_Renderer* renderer){
 	rect.w = ThreatWidth / 2;
 	rect.h = ThreatHeight / 2;
 
-	v = 20;
+	v = 40;
 	texture = loadTexture("Threat.png", renderer);
 	threatAppearance = loadSound("Wind.wav");
 }

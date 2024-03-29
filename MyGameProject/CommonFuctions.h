@@ -14,13 +14,16 @@
 
 #define ThreatWidth  170 
 #define ThreatHeight 100
+#define Width  180
+#define Height 110
+#define WINDOW_TITLE "The Defender !"
 
  const int SCREEN_WIDTH = 1200;
  const int SCREEN_HEIGHT = 700;
  const int STEP = 50;
  const int MENU = 0, HELP = 1, PLAY = 2, EXIT = 3;
  const int Threat_number = 3;
- // const char* WINDOW_TITLE = "The Defender !"; 
+
  const int yPosList[] = { 10, 140, 270, 400 };
  const int xPosList[] = { 1200, 1503, 2103, 2403, 2700, 3000, 3201, 5001 };
  const int SIZE_X = sizeof(xPosList) / sizeof(int);

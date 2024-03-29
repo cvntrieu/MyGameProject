@@ -1,11 +1,6 @@
 
 #include "CommonFuctions.h"
 
-
-//const int SCREEN_WIDTH = 1200;
-//const int SCREEN_HEIGHT = 700;
-const char* WINDOW_TITLE = "The Defender !";
-
 void init() {
 
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {

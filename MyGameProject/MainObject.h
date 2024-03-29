@@ -6,13 +6,6 @@
 #include "TextObject.h"
 #include "MusicObject.h"
 
-#define Width  180
-#define Height 110
-//const int Threat_number = 3;
-//const int SCREEN_WIDTH = 1200;
-//const int SCREEN_HEIGHT = 700;
-//const int STEP = 50;
-
 class Point : public BaseObject {
 
 public:
