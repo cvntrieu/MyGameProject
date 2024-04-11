@@ -63,7 +63,7 @@
  + Cùng lúc xuất hiện nhiều đối tượng đe dọa, nhưng vị trí xuất hiện của chúng cũng mang tính ngấu nhiên.
    
 # (*) Nội dung / hình thức chơi: ( Xét mục (3) )
-  + Có tham khảo việc xử lý va chạm từ Tài liệu bổ sung, nhưng bổ sung thêm tính năng: cho phép va chạm tối đa 3 lần ( lần thứu 4 mới chết ) - tức cho thêm mạng;
+  + Có tham khảo việc xử lý va chạm từ Tài liệu bổ sung, nhưng bổ sung thêm tính năng: cho phép va chạm tối đa 3 lần ( lần thứ 4 mới chết ) - tức cho thêm mạng;
   hay va chạm với kẻ thù xử lý khác va chạm với quà điểm.
   + Có tham khảo việc xử lý chuyển động từ Tài liệu bổ sung, nhưng bổ sung thêm tính đa dạng với 2 kiểu di chuyển: Di chuyển do ta điều khiển và tự di chuyển xuất hiện liên tục trên màn hình.
     Điều khiển và tinh chỉnh được tốc độ di chuyển / Bước đi.
