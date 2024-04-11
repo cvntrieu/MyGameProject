@@ -1,10 +1,10 @@
 # MyGameProject
- Game Project, Advanced Programming, 2nd Term 23-24.
- Sinh viên thực hiện: 
+ - Game Project "The Defender", Advanced Programming, 2nd Term 23-24.
+ - Sinh viên thực hiện: Cao Vũ Nhật Triều ( MSV: 2302 1740, Lớp QH-2023/I-CQ-CA2)
 
  # I - Giới thiệu về hình thức Game.
  
- - Tên: The Defender (Người bảo vệ, phòng thủ) - Game chủ yếu dựa trên luật chơi của 1 số tựa game cũ trên điện thoại cục gạch những năm 2010.
+ - Tên: The Defender (Người bảo vệ, phòng thủ) - Game chủ yếu dựa trên luật chơi của 1 số tựa game cũ trên điện thoại cục gạch những năm 2010. Tên do sinh viên tự đặt.
  -  Khi mở Game sẽ có giao diện mở đầu như sau.
    ![OfficialMenu1](https://github.com/cvntrieu/MyGameProject/assets/143981579/f70e84ea-f985-4bcc-add0-19867e808697)
    Ta có 3 lựa chọn cho Menu mở đầu: Play (vào chơi luôn), Help (Hướng dẫn chơi), và Exit (Thoát Game).
@@ -63,13 +63,13 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
 
 # IV. Tài liệu hỗ trợ.
 - Các website tra cứu các hàm và cách sử dụng:
-   https://lazyfoo.net/tutorials/SDL/index.php
-   https://cplusplus.com/
-   https://wiki.libsdl.org/SDL2/APIByCategory
-   https://wiki.libsdl.org/SDL2/CategoryAPI
-   https://www.libsdl.org/release/SDL-1.2.15/docs/html/index.html
-   ... và 1 số kết quả tìm kiếm trang Google cũng như diễn đàn khác ( như stackoverflow ).
+ + https://lazyfoo.net/tutorials/SDL/index.php
+ + https://cplusplus.com/
+ + https://wiki.libsdl.org/SDL2/APIByCategory
+ + https://wiki.libsdl.org/SDL2/CategoryAPI
+ + https://www.libsdl.org/release/SDL-1.2.15/docs/html/index.html
+ + ... và 1 số kết quả tìm kiếm trang Google cũng như diễn đàn khác ( như stackoverflow ).
 - Tham khảo cách xây dựng khung chương trình ( chỉ tham khảo để định hướng cách làm sau đó tự code theo nhu cầu riêng của bản thân, không phải là phát triển tiếp từ các dự án mẫu này: )
-   https://phattrienphanmem123az.com/
-   file Tài liệu bổ sung của môn Lập trình nâng cao.
-   Code mẫu (cô Châu, thầy Long).
+ + https://phattrienphanmem123az.com/
+ + file Tài liệu bổ sung của môn Lập trình nâng cao.
+ + Code mẫu (cô Châu, thầy Long).
