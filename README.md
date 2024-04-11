@@ -11,12 +11,12 @@
    + Tuần 2 -> 9: Từ 11/2/2024 (nghỉ Tết) - 11/4/2024 (giữa kì): Tiến hành làm dần Game ( xem cụ thể miêu tả các Commits ). Cơ bản hoàn thiện vào Tuần 8, sau đó chỉ còn Clean Code và Commit cho Readme.
    + Nộp bài (dự kiến): Thứ 4, Tuần 11 kì 2, 17/4/2024 (cô Yến).
 * Phần trình bày của em gồm các phần:
-  1. Mở đầu & giới thiệu chung.                             (1: 0.5')
+  1. Mở đầu & giới thiệu chung.                                           (1    : 0.5'  )
   2. Giới thiệu về giao diện Game.
-  3. Luật chơi & Demo cách chơi.                           (2 + 3: 4.5')
+  3. Luật chơi & Demo cách chơi.                                          (2 + 3: 4.5'  )
   4. Tự đánh giá ( Ngưỡng điểm ).
-  5. Tài liệu tham khảo.                                   (3 + 4: 5')
-  6. Q&A: Câu hỏi và nhận xét. Kết thúc phần trình bày.    (5: 5'-10')
+  5. Tài liệu tham khảo.                                                  (4 + 5: 5'    )
+  6. Q&A: Câu hỏi và nhận xét. Kết thúc phần trình bày.                   (6    : 5'-10')
 * Sau đây xin mời cô và các bạn đi vào chi tiết.
  # II - Giới thiệu về hình thức Game. (2')
  
