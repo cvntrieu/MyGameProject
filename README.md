@@ -1,4 +1,5 @@
 # Advanced Programming Assignment: The Defender!
+Triều Cvn ^^ <3
 # I - Mở đầu & Giới thiệu chung. (0.5')
 * Xin chào cô và các bạn! Bản thân em xin được giới thiệu về Bài tập lớn em thực hiện của môn Lập trình nâng cao - Lớp 23.
  - Game Project "The Defender", Advanced Programming, 2nd Term - Spring 2023-2024 - Class 23, University of Engineering and Technology, Vietnam National University, Hanoi.
