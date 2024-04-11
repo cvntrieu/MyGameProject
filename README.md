@@ -3,6 +3,12 @@
  - Game Project "The Defender", Advanced Programming, 2nd Term - Spring 2023-2024 - Class 23, University of Engineering and Technology, Vietnam National University, Hanoi.
  - Sinh viên thực hiện: Cao Vũ Nhật Triều ( MSV: 2302 1740, Lớp QH-2023/I-CQ-CA2, Lớp 23 - Nhóm thực hành 2).
  - Cán bộ - Giảng viên hướng dẫn và chấm bài: Trần Thị Minh Châu, Vương Thị Hải Yến (UET - VNU).
+ - Thời gian thực hiện:
+   + Tuần 1 - Từ 20/1/2024 - 11/2/2024 ( Sau thi học kì 1 và vào Tuần đầu kì 2 ):
+     Bắt đầu nghiên cứu cách cài các thư viện, cấu hình SDL2 cho Visual Studio. Tham khảo trước chương trình chạy thử của thầy Long.
+     Bước đầu cài, chạy thành công. 
+   + Tuần 2 -> 9: Từ 12/2/2024 (nghỉ Tết) - 11/4/2024 (giữa kì): Tiến hành làm dần Game ( xem cụ thể miêu tả các Commits ). Cơ bản hoàn thiện vào Tuần 8, sau đó chỉ còn Clean Code và Commit cho Readme.
+   + Nộp bài (dự kiến): Thứ 4, Tuần 11 kì 2, 17/4/2024 (cô Yến).
 * Phần trình bày của em gồm các phần: 
   1. Giới thiệu về hình thức Game.
   2. Luật chơi.                                            (1 + 2: 5')
