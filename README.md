@@ -7,7 +7,7 @@
  - Thời gian thực hiện:
    + Tuần 1 - Từ 20/1/2024 - 11/2/2024 ( Ngay sau thi học kì 1 và vào Tuần đầu kì 2 ):
      Bắt đầu nghiên cứu cách cài các thư viện, cấu hình SDL2 cho Visual Studio. Tham khảo trước chương trình chạy thử của thầy Long.
-     Bước đầu cài, chạy thành công. 
+     Bước đầu cài, chạy thành công. Nắm bắt yêu cầu và hình thành - chốt ý tưởng chủ đề Game. Tạo và học git.
    + Tuần 2 -> 9: Từ 11/2/2024 (nghỉ Tết) - 11/4/2024 (giữa kì): Tiến hành làm dần Game ( xem cụ thể miêu tả các Commits ). Cơ bản hoàn thiện vào Tuần 8, sau đó chỉ còn Clean Code và Commit cho Readme.
    + Nộp bài (dự kiến): Thứ 4, Tuần 11 kì 2, 17/4/2024 (cô Yến).
 * Phần trình bày của em gồm các phần:
