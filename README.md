@@ -37,7 +37,7 @@
  # III - Tự đánh giá.
  Về mức điểm, em xác định ngưỡng điểm khoảng 7.5 - 8. Sau đây là các lí do em đưa ra để chứng minh cho ngưỡng điểm này.
  
-  # Nhắc lại: Band 7.5 - 8.5: 
+ => Nhắc lại: Band 7.5 - 8.5: 
 (1) Game tự viết có thuật toán nằm ngoài chương trình môn học (điểm đánh giá theo độ khó của thuật toán). hoặc
 
 (2) Game tự viết có đồ họa đơn giản
@@ -46,7 +46,7 @@
 
 (điểm của loại (2) và  (3) đánh giá theo số những tính năng tự làm hoặc tự học).
 
-# => Chiếu theo yêu cầu trên, game của em đã đạt được:
+ => Chiếu theo yêu cầu trên, game của em đã đạt được:
 # (*) Đã thể hiện các tính năng đồ họa:  ( Xét mục (2) )
  + Tải thành công ảnh nền, ảnh các nhân vật, đối tượng, ảnh các giao diện chuyển tiếp (Menu). Cài thành công text để ghi các điểm số. 
  + Cùng lúc xuất hiện nhiều đối tượng đe dọa, nhưng vị trí xuất hiện của chúng cũng mang tính ngấu nhiên.
@@ -59,11 +59,11 @@
   + Xử lý được cơ chế khi ấn các nút Menu ( Nhấn Play Again chơi lại được, Nhấn Exit để thoát, việc chuyển tiếp giữa các giao diện).
   + Lưu được điểm số của lượt chơi hiện tại, điểm số kỷ lục, và tính được số mạng còn lại.
   + Tạo được âm thanh lúc mới vào chơi, nhạc nền lúc đang chơi, âm thanh va chạm, âm thanh báo hiệu Game Over.
-# Code và khung chương trình: 
+# (*) Code và khung chương trình: 
   + Đã chia được thành 3 loại file và Lập trình hướng đối tượng: File Object.h để quản lý các đối tượng ( Thiết kế OOP ), File Object.cpp để định nghĩa các phương thức tương ứng.
 Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí cả âm thanh và text trong file riêng. Việc gọi ra trong file main.cpp.
   + Xử lý nhận sự kiện bàn phím (PollEvent) kết hợp với các vòng lặp thể hiện logic chương trình.
-# Hướng phát triển thêm và Cải thiện: 
+# (*) Hướng phát triển thêm và Cải thiện: 
   + Rút ngắn file main.cpp hơn nữa.
   + Có thể tạo hiệu ứng Hoạt hình (animation).
 
