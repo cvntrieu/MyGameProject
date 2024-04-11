@@ -66,6 +66,7 @@
   + Có tham khảo việc xử lý va chạm từ Tài liệu bổ sung, nhưng bổ sung thêm tính năng: cho phép va chạm tối đa 3 lần ( lần thứu 4 mới chết ) - tức cho thêm mạng;
   hay va chạm với kẻ thù xử lý khác va chạm với quà điểm.
   + Có tham khảo việc xử lý chuyển động từ Tài liệu bổ sung, nhưng bổ sung thêm tính đa dạng với 2 kiểu di chuyển: Di chuyển do ta điều khiển và tự di chuyển xuất hiện liên tục trên màn hình.
+    Điều khiển và tinh chỉnh được tốc độ di chuyển / Bước đi.
   + Trình diện được giao diện ban đầu (Menu), giao diện hướng dẫn chơi ( Help ), giao diện sau khi chơi (Game Over).
   + Xử lý được cơ chế khi ấn các nút Menu ( Nhấn Play Again chơi lại được, Nhấn Exit để thoát, việc chuyển tiếp giữa các giao diện).
   + Lưu được điểm số của lượt chơi hiện tại, điểm số kỷ lục, và tính được số mạng còn lại.
