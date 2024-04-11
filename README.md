@@ -94,3 +94,4 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
 # VI. Câu hỏi bổ sung và nhận xét. Kết thúc phần trình bày. (5' - 10')
 - Em xin được trả lời các câu hỏi cô đưa ra.
 - Kết thúc.
+  #                                                        --- Thank you & The end! ---
