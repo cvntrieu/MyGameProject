@@ -1,4 +1,5 @@
 # Advanced Programming Assignment: The Defender!
+# I - Mở đầu & Giới thiệu chung. (0.5')
 * Xin chào cô và các bạn! Bản thân em xin được giới thiệu về Bài tập lớn em thực hiện của môn Lập trình nâng cao - Lớp 23.
  - Game Project "The Defender", Advanced Programming, 2nd Term - Spring 2023-2024 - Class 23, University of Engineering and Technology, Vietnam National University, Hanoi.
  - Sinh viên thực hiện: Cao Vũ Nhật Triều ( MSV: 2302 1740, Lớp QH-2023/I-CQ-CA2, Lớp 23 - Nhóm thực hành 2).
@@ -9,14 +10,15 @@
      Bước đầu cài, chạy thành công. 
    + Tuần 2 -> 9: Từ 11/2/2024 (nghỉ Tết) - 11/4/2024 (giữa kì): Tiến hành làm dần Game ( xem cụ thể miêu tả các Commits ). Cơ bản hoàn thiện vào Tuần 8, sau đó chỉ còn Clean Code và Commit cho Readme.
    + Nộp bài (dự kiến): Thứ 4, Tuần 11 kì 2, 17/4/2024 (cô Yến).
-* Phần trình bày của em gồm các phần: 
-  1. Giới thiệu về hình thức Game.
-  2. Luật chơi.                                            (1 + 2: 5')
-  3. Tự đánh giá ( Ngưỡng điểm ).
-  4. Tài liệu tham khảo.                                   (3 + 4: 5')
-  5. Q&A: Câu hỏi và nhận xét. Kết thúc phần trình bày.    (5: 5'-10')
+* Phần trình bày của em gồm các phần:
+  1. Mở đầu & giới thiệu chung.                             (1: 0.5')
+  2. Giới thiệu về giao diện Game.
+  3. Luật chơi & Demo cách chơi.                           (2 + 3: 4.5')
+  4. Tự đánh giá ( Ngưỡng điểm ).
+  5. Tài liệu tham khảo.                                   (3 + 4: 5')
+  6. Q&A: Câu hỏi và nhận xét. Kết thúc phần trình bày.    (5: 5'-10')
 * Sau đây xin mời cô và các bạn đi vào chi tiết.
- # I - Giới thiệu về hình thức Game. (2.5')
+ # II - Giới thiệu về hình thức Game. (2')
  
  - Tên: The Defender (Người bảo vệ, phòng thủ) - Game chủ yếu dựa trên luật chơi của 1 số tựa game cũ trên điện thoại cục gạch những năm 2010. Tên do sinh viên tự đặt.
  -  Khi mở Game sẽ có giao diện mở đầu như sau.
@@ -32,17 +34,17 @@
    Màn hình xuất hiện nhân vật chính diện (nhân vật màu hồng, đeo áo choàng), liên tục xuất hiện đối tượng phản diện ( con quỷ đỏ ) hoặc (thỉnh thoảng) hình hộp quà bay ngang từ phải sang trái với tốc độ nhanh.
    Ngoài ra còn hiển thị điểm của bạn hiện tại, số mạng của nhân vật bạn còn ( đứng bên cạnh hình trái tim, bên trên góc trái ), và điểm cao nhất lịch sử chơi ( đứng bên cạnh chữ Top 1, bên trên góc phải ).
    
-# II - Luật chơi. (2.5')
+# III - Luật chơi & Demo cách chơi. (2.5')
 
-   Nhiệm vụ của bạn là nhanh chóng nhìn nhận và điều khiển nhân vật tránh va chạm với các con quỷ, đồng thời cố gắng va vào các hình quà để nhận điểm thưởng, bằng 4 phím chỉ hướng tương ứng trên bàn phím máy tính 
-   ( ^ để đi lên, V để đi xuống, < để đi trái ngang, > ngang sang phải ).
+- Nhiệm vụ của bạn là nhanh chóng nhìn nhận và điều khiển nhân vật tránh va chạm với các con quỷ, đồng thời cố gắng va vào các hình quà để nhận điểm thưởng, bằng 4 phím chỉ hướng tương ứng trên bàn phím máy tính 
+( ^ để đi lên, V để đi xuống, < để đi trái ngang, > ngang sang phải ).
    
-   Cơ chế tính điểm: Cứ mỗi con quỷ đi ra hết khỏi màn hình, bạn được thêm 1 điểm. Nếu ăn được hộp quà, thêm điểm thưởng 5 điểm / 1 quà. Còn cứ mỗi lần bị va chạm với con quỷ thì trừ 1 mạng.
-   Khi số mạng đã chỉ còn 0 mà để va chạm thêm lần nữa thì chính thức Game Over và hết lượt chơi này. Giao diện hiện ra:
+- Cơ chế tính điểm: Cứ mỗi con quỷ đi ra hết khỏi màn hình, bạn được thêm 1 điểm. Nếu ăn được hộp quà, thêm điểm thưởng 5 điểm / 1 quà. Còn cứ mỗi lần bị va chạm với con quỷ thì trừ 1 mạng.
+  Khi số mạng đã chỉ còn 0 mà để va chạm thêm lần nữa thì chính thức Game Over và hết lượt chơi này. Giao diện hiện ra:
    ![OfficialMenu3 0](https://github.com/cvntrieu/MyGameProject/assets/143981579/499324a6-43c4-42f9-8f7f-1fc16691b938)
-   Người chơi có thể chọn Play Again để chơi lại lượt tiếp, hoặc Exit để thoát ra không chơi nữa.
+- Người chơi có thể chọn Play Again để chơi lại lượt tiếp, hoặc Exit để thoát ra không chơi nữa. 
 
- # III - Tự đánh giá. (4.5')
+ # IV - Tự đánh giá. (4.5')
 - Về mức điểm, em xác định ngưỡng điểm khoảng 7.5 - 8. Sau đây là các lí do em đưa ra để chứng minh cho ngưỡng điểm này. 
 -  Nhắc lại: Band 7.5 - 8.5:
 -  
@@ -75,7 +77,7 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
   + Rút ngắn file main.cpp hơn nữa.
   + Có thể tạo hiệu ứng Hoạt hình (animation).
 
-# IV. Tài liệu hỗ trợ. (0.5')
+# V. Tài liệu hỗ trợ. (0.5')
 - Các website tra cứu các hàm và cách sử dụng:
  + https://lazyfoo.net/tutorials/SDL/index.php
  + https://cplusplus.com/
@@ -89,6 +91,6 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
  + file Tài liệu bổ sung của môn Lập trình nâng cao.
  + Code mẫu (cô Châu, thầy Long).
   - Và trên đây là toàn bộ phần trình bày của em về Bài tập lớn em đã thực hiện. Xin cảm ơn sự theo dõi của cô và các bạn.
-# V. Câu hỏi bổ sung và nhận xét. Kết thúc phần trình bày. (5' - 10')
+# VI. Câu hỏi bổ sung và nhận xét. Kết thúc phần trình bày. (5' - 10')
 - Em xin được trả lời các câu hỏi cô đưa ra.
 - Kết thúc.
