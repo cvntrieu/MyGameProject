@@ -36,7 +36,8 @@
 
  # III - Tự đánh giá.
 - Về mức điểm, em xác định ngưỡng điểm khoảng 7.5 - 8. Sau đây là các lí do em đưa ra để chứng minh cho ngưỡng điểm này. 
--  Nhắc lại: Band 7.5 - 8.5: 
+-  Nhắc lại: Band 7.5 - 8.5:
+-  
      (1) Game tự viết có thuật toán nằm ngoài chương trình môn học (điểm đánh giá theo độ khó của thuật toán), hoặc
      
      (2) Game tự viết có đồ họa đơn giản.
