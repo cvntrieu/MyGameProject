@@ -1,14 +1,15 @@
-# The Defender 
+# Advanced Programming Assignment: The Defender!
 * Xin chào cô va các bạn, bản thân em xin được giới thiệu về Bài tập lớn của môn Lập trình nâng cao - Lớp 23.
  - Game Project "The Defender", Advanced Programming, 2nd Term - Spring 2023-2024 - Class 23, University of Engineering and Technology, Vietnam National University, Hanoi.
  - Sinh viên thực hiện: Cao Vũ Nhật Triều ( MSV: 2302 1740, Lớp QH-2023/I-CQ-CA2).
-* Phần trình bày của em gồm các phần:
+* Phần trình bày của em gồm các phần: 
   1. Giới thiệu về hình thức Game.
-  2. Luật chơi.
+  2. Luật chơi.                                            (1 + 2: 5')
   3. Tự đánh giá ( Ngưỡng điểm ).
-  4. Tài liệu tham khảo.
+  4. Tài liệu tham khảo.                                   (3 + 4: 5')
+  5. Q&A: Câu hỏi và nhận xét. Kết thúc phần trình bày.    (5: 5'-10')
 * Sau đây xin mời cô và các bạn đi vào chi tiết.
- # I - Giới thiệu về hình thức Game.
+ # I - Giới thiệu về hình thức Game. (2.5')
  
  - Tên: The Defender (Người bảo vệ, phòng thủ) - Game chủ yếu dựa trên luật chơi của 1 số tựa game cũ trên điện thoại cục gạch những năm 2010. Tên do sinh viên tự đặt.
  -  Khi mở Game sẽ có giao diện mở đầu như sau.
@@ -24,7 +25,7 @@
    Màn hình xuất hiện nhân vật chính diện (nhân vật màu hồng, đeo áo choàng), liên tục xuất hiện đối tượng phản diện ( con quỷ đỏ ) hoặc (thỉnh thoảng) hình hộp quà bay ngang từ phải sang trái với tốc độ nhanh.
    Ngoài ra còn hiển thị điểm của bạn hiện tại, số mạng của nhân vật bạn còn ( đứng bên cạnh hình trái tim, bên trên góc trái ), và điểm cao nhất lịch sử chơi ( đứng bên cạnh chữ Top 1, bên trên góc phải ).
    
-# II - Luật chơi.   
+# II - Luật chơi. (2.5')
 
    Nhiệm vụ của bạn là nhanh chóng nhìn nhận và điều khiển nhân vật tránh va chạm với các con quỷ, đồng thời cố gắng va vào các hình quà để nhận điểm thưởng, bằng 4 phím chỉ hướng tương ứng trên bàn phím máy tính 
    ( ^ để đi lên, V để đi xuống, < để đi trái ngang, > ngang sang phải ).
@@ -34,7 +35,7 @@
    ![OfficialMenu3 0](https://github.com/cvntrieu/MyGameProject/assets/143981579/499324a6-43c4-42f9-8f7f-1fc16691b938)
    Người chơi có thể chọn Play Again để chơi lại lượt tiếp, hoặc Exit để thoát ra không chơi nữa.
 
- # III - Tự đánh giá.
+ # III - Tự đánh giá. (4.5')
 - Về mức điểm, em xác định ngưỡng điểm khoảng 7.5 - 8. Sau đây là các lí do em đưa ra để chứng minh cho ngưỡng điểm này. 
 -  Nhắc lại: Band 7.5 - 8.5:
 -  
@@ -67,7 +68,7 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
   + Rút ngắn file main.cpp hơn nữa.
   + Có thể tạo hiệu ứng Hoạt hình (animation).
 
-# IV. Tài liệu hỗ trợ.
+# IV. Tài liệu hỗ trợ. (0.5')
 - Các website tra cứu các hàm và cách sử dụng:
  + https://lazyfoo.net/tutorials/SDL/index.php
  + https://cplusplus.com/
@@ -75,7 +76,12 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
  + https://wiki.libsdl.org/SDL2/CategoryAPI
  + https://www.libsdl.org/release/SDL-1.2.15/docs/html/index.html
  + ... và 1 số kết quả tìm kiếm trang Google cũng như diễn đàn khác ( như stackoverflow ).
-- Tham khảo cách xây dựng khung chương trình ( chỉ tham khảo để định hướng cách làm sau đó tự code theo nhu cầu riêng của bản thân, không phải là phát triển tiếp từ các dự án mẫu này: )
+- Tham khảo cách xây dựng khung chương trình ( chỉ tham khảo để định hướng cách làm sau đó tự code theo nhu cầu riêng của bản thân, không phải là phát triển tiếp từ các dự án mẫu nêu dưới đây.
+  Xin được gửi lời cảm ơn chân thành sâu sắc đến các thầy cô và các tác giả hướng dẫn! )
  + https://phattrienphanmem123az.com/
  + file Tài liệu bổ sung của môn Lập trình nâng cao.
  + Code mẫu (cô Châu, thầy Long).
+  - Và trên đây là toàn bộ phần trình bày của em về Bài tập lớn em đã thực hiện. Xin cảm ơn sự theo dõi của cô và các bạn.
+# V. Q&A: Câu hỏi bổ sung và nhận xét. Kết thúc phần trình bày. (5' - 10')
+- Em xin được trả lời các câu hỏi cô đưa ra.
+- Kết thúc.
