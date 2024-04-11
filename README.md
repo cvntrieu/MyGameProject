@@ -1,6 +1,6 @@
 # MyGameProject
- Game Project, Advanced Programming, 2nd Term 23-24, 1740
- Sinh viên thực hiện:
+ Game Project, Advanced Programming, 2nd Term 23-24.
+ Sinh viên thực hiện: 
 
  # I - Giới thiệu về hình thức Game
  
