@@ -69,7 +69,7 @@ Triều Cvn ^^ <3
   + Có tham khảo việc xử lý chuyển động từ Tài liệu bổ sung, nhưng bổ sung thêm tính đa dạng với 2 kiểu di chuyển: Di chuyển do ta điều khiển và tự di chuyển xuất hiện liên tục trên màn hình.
     Điều khiển và tinh chỉnh được tốc độ di chuyển / Bước đi.
   + Trình diện được giao diện ban đầu (Menu), giao diện hướng dẫn chơi ( Help ), giao diện sau khi chơi (Game Over).
-  + Xử lý được cơ chế khi ấn các nút Menu ( Nhấn Play Again chơi lại được, Nhấn Exit để thoát, việc chuyển tiếp giữa các giao diện).
+  + Xử lý được cơ chế khi ấn các nút Menu. Cho phép chơi nhiều ván ( Nhấn Play Again chơi lại được ván mới, Nhấn Exit để thoát, việc chuyển tiếp giữa các giao diện).
   + Lưu được điểm số của lượt chơi hiện tại, điểm số kỷ lục, và tính được số mạng còn lại.
   + Tạo được âm thanh lúc mới vào chơi, nhạc nền lúc đang chơi, âm thanh va chạm, âm thanh báo hiệu Game Over.
 # (*) Code và khung chương trình: 
