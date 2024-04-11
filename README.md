@@ -1,5 +1,5 @@
-# MyGameProject
- - Game Project "The Defender", Advanced Programming, 2nd Term 23-24.
+# The Defender 
+ - Game Project "The Defender", Advanced Programming, 2nd Term - Spring 2023-2024 - Class 23, University of Engineering and Technology, Vietnam National University, Hanoi.
  - Sinh viên thực hiện: Cao Vũ Nhật Triều ( MSV: 2302 1740, Lớp QH-2023/I-CQ-CA2)
 
  # I - Giới thiệu về hình thức Game.
