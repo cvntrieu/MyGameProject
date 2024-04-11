@@ -82,6 +82,6 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
  + file Tài liệu bổ sung của môn Lập trình nâng cao.
  + Code mẫu (cô Châu, thầy Long).
   - Và trên đây là toàn bộ phần trình bày của em về Bài tập lớn em đã thực hiện. Xin cảm ơn sự theo dõi của cô và các bạn.
-# V. Q&A: Câu hỏi bổ sung và nhận xét. Kết thúc phần trình bày. (5' - 10')
+# V. Câu hỏi bổ sung và nhận xét. Kết thúc phần trình bày. (5' - 10')
 - Em xin được trả lời các câu hỏi cô đưa ra.
 - Kết thúc.
