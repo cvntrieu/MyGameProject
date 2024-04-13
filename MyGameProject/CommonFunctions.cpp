@@ -1,6 +1,15 @@
 
 #include "CommonFuctions.h"
 
+void waitUntilKeyPressed() {
+
+    SDL_Event e;
+    while (true) {
+        if (SDL_PollEvent(&e) != 0 && (e.type == SDL_KEYDOWN || e.type == SDL_QUIT)) return;
+        SDL_Delay(1);
+    }
+}
+
 void init() {
 
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {

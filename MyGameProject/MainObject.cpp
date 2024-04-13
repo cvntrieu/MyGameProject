@@ -57,12 +57,37 @@ void MainObject::reset(SDL_Renderer* renderer) {
 
 void MainObject::initMain(SDL_Renderer* renderer) {
 
-	rect.x = 1;
-	rect.y = 1;
+	rect.x = 0;
+	rect.y = 0;
 	rect.w = Width;
 	rect.h = Height;
-	texture = loadTexture("medium.png", renderer);
+	texture = loadTexture(BIRD_FILE, renderer);
 	collisionSound = loadSound("Collision.wav");
+}
+
+void MainObject::initClip(SDL_Texture* _texture, int frames, const int _clips[][4]) {
+
+	texture = _texture;
+	SDL_Rect clip;
+
+	for (int i = 0; i < FRAME_NUMBERS; i++) {
+
+		clip.x = _clips[i][0];
+		clip.y = _clips[i][1];
+		clip.w = _clips[i][2];
+		clip.h = _clips[i][3];
+		clips.push_back(clip);
+	}
+}
+
+void MainObject::tick() {
+
+	currentFrame = (currentFrame + 1) % clips.size();
+}
+
+const SDL_Rect* MainObject::getCurrentClip() const
+{
+	return &(clips[currentFrame]);
 }
 
 MainObject::~MainObject() {
@@ -116,7 +141,7 @@ void MainObject::HandleInputAction(SDL_Event& events) {
 	}
 }
 
-bool MainObject::collision(SDL_Rect& threat) // Note: Pass-by-reference
+bool MainObject::collision(SDL_Rect& threat) // Pass-by-reference to change threat
 {
 	int left1 = rect.x * 1.15, right1 = rect.x + rect.w * 0.85;
 	int top1 = rect.y, bottom1 = rect.y + rect.h;

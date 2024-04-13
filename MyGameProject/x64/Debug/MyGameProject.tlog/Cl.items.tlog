@@ -1,10 +1,11 @@
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\CommonFunctions.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\CommonFunctions.obj
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\GameObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\GameObject.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\main.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\main.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\BaseObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\BaseObject.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\MainObject.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.h;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\MainObject.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MenuObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\MenuObject.obj
-C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MusicObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\MusicObject.obj
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\Music.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\Music.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\Record.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\Record.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\TextObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\TextObject.obj
 C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\ThreatObject.cpp;C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\x64\Debug\ThreatObject.obj

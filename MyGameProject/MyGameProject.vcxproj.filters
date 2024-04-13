@@ -33,7 +33,7 @@
     <ClCompile Include="TextObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MusicObject.cpp">
+    <ClCompile Include="Music.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MenuObject.cpp">
@@ -45,6 +45,9 @@
     <ClCompile Include="CommonFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseObject.h">
@@ -53,10 +56,10 @@
     <ClInclude Include="ThreatObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextObject.h">
+    <ClInclude Include="Text.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MusicObject.h">
+    <ClInclude Include="Music.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuObject.h">
@@ -66,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CommonFuctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

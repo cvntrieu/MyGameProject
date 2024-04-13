@@ -1,7 +1,7 @@
 
 
 #include "BaseObject.h"
-#include "TextObject.h"
+#include "Text.h"
 
 using namespace std;
 

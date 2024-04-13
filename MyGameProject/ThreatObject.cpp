@@ -1,14 +1,14 @@
 
 #include "ThreatObject.h"
-#include "MusicObject.h"
+#include "Music.h"
 #include <ctime>
 #include <cstdlib>
 
 
 void ThreatObject::initThreat(SDL_Renderer* renderer){
 
-	rect.x = xPosList[rand() % SIZE_X];   // SCREEN_WIDTH + v;
-	rect.y = yPosList[rand() % SIZE_Y];   // rand() % 600;
+	rect.x = xPosList[rand() % SIZE_X];   
+	rect.y = yPosList[rand() % SIZE_Y];   
 	rect.w = ThreatWidth / 2;
 	rect.h = ThreatHeight / 2;
 
@@ -16,6 +16,7 @@ void ThreatObject::initThreat(SDL_Renderer* renderer){
 	texture = loadTexture("Threat.png", renderer);
 	threatAppearance = loadSound("Wind.wav");
 }
+
 
 
 ThreatObject::~ThreatObject() {

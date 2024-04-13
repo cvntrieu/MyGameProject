@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CommonFunctions.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="BaseObject.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -148,7 +149,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MenuObject.cpp" />
-    <ClCompile Include="MusicObject.cpp" />
+    <ClCompile Include="Music.cpp" />
     <ClCompile Include="Record.cpp" />
     <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="ThreatObject.cpp" />
@@ -159,10 +160,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="CommonFuctions.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="MenuObject.h" />
-    <ClInclude Include="MusicObject.h" />
+    <ClInclude Include="Music.h" />
     <ClInclude Include="Record.h" />
-    <ClInclude Include="TextObject.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="ThreatObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

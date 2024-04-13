@@ -1,5 +1,5 @@
 
-#include "TextObject.h"
+#include "Text.h"
 
 void initText() {
 
