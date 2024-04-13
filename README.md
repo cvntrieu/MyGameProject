@@ -30,7 +30,7 @@ Triều Cvn ^^ <3, 2024.
    ![OfficialHelp](https://github.com/cvntrieu/MyGameProject/assets/143981579/9a1fe92a-a163-4cee-828f-653a94cd4094)
    Đọc Help xong thì nhấn Back để quay lại Giao diện mở đầu.
    Nhấn vào Play để chơi. Giao diện sẽ có dạng:
-   
+   ![Demo](https://github.com/cvntrieu/MyGameProject/assets/143981579/9e76145d-d0bf-4a67-b8e0-40f1fed4d30d)
    Màn hình xuất hiện nhân vật chính diện (nhân vật màu hồng, đeo áo choàng), liên tục xuất hiện đối tượng phản diện ( con quỷ đỏ ) hoặc (thỉnh thoảng) hình hộp quà bay ngang từ phải sang trái với tốc độ nhanh.
    Ngoài ra còn hiển thị điểm của bạn hiện tại, số mạng của nhân vật bạn còn ( đứng bên cạnh hình trái tim, bên trên góc trái ), và điểm cao nhất lịch sử chơi ( đứng bên cạnh chữ Top 1, bên trên góc phải ).
    
@@ -107,6 +107,7 @@ Tạo 1 BaseObject làm khung để 1 số object khác kế thừa. Quản lí 
   - Trái tim: https://www.pngall.com/pink-heart-png/
   - Hình quà: https://www.myeventpod.com/
   - Nhạc nền: https://www.youtube.com/watch?v=22NqCb_cwRc&list=PLqi51aibKx1lm0eRcfFsDuv9ZYP1iAPJU&index=4
+  - Hình nền: https://www.vecteezy.com/vector-art/7633071-cartoon-colorful-panorama-of-spring-summer-beautiful-nature-green-grasslands-meadow-with-mountains-on-horizon-background-summer-mountain-landscape-dawn-over-the-valley-vector-illustration
   - Âm mở đầu, va chạm và kết thúc: https://www.freesoundeffects.com/
 * Và trên đây là toàn bộ phần trình bày của em về Bài tập lớn em đã thực hiện. Xin cảm ơn sự theo dõi của cô và các bạn.
 
