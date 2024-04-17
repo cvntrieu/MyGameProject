@@ -31,7 +31,7 @@ Triều Cvn ^^ <3, 2024.
    Đọc Help xong thì nhấn Back để quay lại Giao diện mở đầu.
    Nhấn vào Play để chơi. Giao diện sẽ có dạng:
    ![Demo](https://github.com/cvntrieu/MyGameProject/assets/143981579/9e76145d-d0bf-4a67-b8e0-40f1fed4d30d)
-   Màn hình xuất hiện nhân vật chính diện (nhân vật màu hồng, đeo áo choàng), liên tục xuất hiện đối tượng phản diện ( con quỷ đỏ ) hoặc (thỉnh thoảng) hình hộp quà bay ngang từ phải sang trái với tốc độ nhanh.
+   Màn hình xuất hiện nhân vật chính diện (Sprite, a red Bird), liên tục xuất hiện đối tượng phản diện ( con quỷ đỏ ) hoặc (thỉnh thoảng) hình hộp quà bay ngang từ phải sang trái với tốc độ nhanh.
    Ngoài ra còn hiển thị điểm của bạn hiện tại, số mạng của nhân vật bạn còn ( đứng bên cạnh hình trái tim, bên trên góc trái ), và điểm cao nhất lịch sử chơi ( đứng bên cạnh chữ Top 1, bên trên góc phải ).
    
 # III - Luật chơi & Demo cách chơi. (2.5')
