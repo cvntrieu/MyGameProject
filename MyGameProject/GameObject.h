@@ -35,6 +35,7 @@ public:
 	void initGame();
 	void renderGame();
 	void playGame();
+	void showMenu(SDL_Texture* menuTexture);
 	~Game();
 };
 

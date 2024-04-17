@@ -19,13 +19,13 @@ void Game::initGame() {
 	end = loadSound("GameOver.wav");
 
 	menu.initMenu(renderer);
-	SDL_RenderCopy(renderer, background, NULL, NULL);
 	player.initMain(renderer);
 	player.initClip(player.texture, FRAME_NUMBERS, BIRD);
 	for (int i = 0; i < Threat_number; i++) { troop[i].initThreat(renderer); }
 	gift.initThreat(renderer);
 	gift.texture = loadTexture("Gift.png", renderer); // Sua lai texture so voi ham initThreat
 }
+
 
 void Game::renderGame() {
 
@@ -34,14 +34,22 @@ void Game::renderGame() {
 	SDL_RenderCopy(renderer, background, NULL, NULL);
 	SDL_RenderCopy(renderer, gift.texture, NULL, &gift.rect);
 	for (int i = 0; i < Threat_number; i++) {
-		SDL_RenderCopy(renderer, troop[i].texture, NULL, &troop[i].rect);
+		SDL_RenderCopy(renderer, troop[i].texture, NULL, &troop[i].rect); // Hien ra troop[i] sau moi lan -v
 	}
     SDL_RenderCopy(renderer, heart, NULL, &heartRect);
 
 	player.renderBird(renderer);
 
 	SDL_RenderPresent(renderer); // Bay gio moi Present
-	SDL_Delay(20); // De CPU do lag, tranh bi giat man hinh / animation qua nhanh
+	SDL_Delay(20); // De CPU do lag, tranh bi giat man hinh
+}
+
+
+void Game::showMenu(SDL_Texture* menuTexture) {
+
+	SDL_RenderClear(renderer);
+	SDL_RenderCopy(renderer, menuTexture, NULL, NULL);
+	SDL_RenderPresent(renderer);
 }
 
 
@@ -51,9 +59,7 @@ void Game::playGame() {
 	playChunk(welcome);
 	while (!quit)
 	{
-		SDL_RenderClear(renderer);
-		SDL_RenderCopy(renderer, menu.texture, NULL, NULL);
-		SDL_RenderPresent(renderer); // Show Menu
+		showMenu(menu.texture);
 
 		SDL_Event event;
 		while (SDL_PollEvent(&event)) {
@@ -77,9 +83,7 @@ void Game::playGame() {
 
 				else if (menu.status == HELP) { // // = 1 ===================================================================
 
-					SDL_RenderClear(renderer);
-					SDL_RenderCopy(renderer, menu.helpTexture, NULL, NULL);
-					SDL_RenderPresent(renderer);
+					showMenu(menu.helpTexture);
 
 					bool exitHelp = false;
 					while (!exitHelp) {
@@ -146,7 +150,7 @@ void Game::playGame() {
 							// Threat
 							for (int i = 0; i < Threat_number; i++) {
 
-								troop[i].moveControl();
+								troop[i].moveControl(); // Moi lan hien ra thi -v
 								cout << "i = " << i << endl;
 								cout << "Start render" << endl;
 
@@ -205,9 +209,7 @@ void Game::playGame() {
 						bool overQuit = false;
 						while (!overQuit) {
 
-							SDL_RenderClear(renderer);
-							SDL_RenderCopy(renderer, menu.gameOverTexture, NULL, NULL);
-							SDL_RenderPresent(renderer);
+							showMenu(menu.gameOverTexture);
 
 							while (SDL_PollEvent(&event)) {
 
@@ -258,3 +260,5 @@ Game::~Game() {
 	destroyTexture(background);
 	Quit(window, renderer);
 }
+
+
