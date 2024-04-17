@@ -15,7 +15,7 @@ using namespace std;
 
 class Game {
 
-public:
+private:
 
 	SDL_Window* window;
 	SDL_Renderer* renderer;
@@ -30,6 +30,7 @@ public:
 	Mix_Chunk* welcome;
 	Mix_Chunk* end;
 
+public:
 	void initGame();
 	void renderClip(MainObject& myBird);
 	void playGame();

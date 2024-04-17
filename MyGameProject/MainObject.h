@@ -28,7 +28,7 @@ public:
 
 	Point point;
 	Mix_Chunk* collisionSound;
-	vector<SDL_Rect> clips;
+	vector<SDL_Rect> clips; // cac khung anh
 	int currentFrame = 0;
 
 	void initMain(SDL_Renderer* renderer);
@@ -38,7 +38,7 @@ public:
 	~MainObject();
 	void reset(SDL_Renderer* renderer);
 	void HandleInputAction(SDL_Event& events);
-	bool collision(SDL_Rect& threat);
+	bool collision(SDL_Rect threat);
 };
 
 #endif

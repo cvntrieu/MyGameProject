@@ -28,11 +28,11 @@ void Game::initGame() {
 	gift.texture = loadTexture("Gift.png", renderer);
 }
 
-void Game::renderClip(MainObject& myBird) {
+void Game::renderClip(MainObject& myBird) { 
 
-	const SDL_Rect* clipRect = myBird.getCurrentClip();
+	const SDL_Rect* clipRect = myBird.getCurrentClip(); // * ?? phù h?p tham s? RenderCopy
 	SDL_Rect renderQuad = { myBird.rect.x, myBird.rect.y, clipRect->w, clipRect->h };
-	SDL_RenderCopy(renderer, myBird.texture, clipRect, &renderQuad);
+	SDL_RenderCopy(renderer, myBird.texture, clipRect, &renderQuad); // source (clip) - destination (current x, y - w,h is similar to clipRect)
 }
 
 

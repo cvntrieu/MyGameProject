@@ -57,8 +57,8 @@ void MainObject::reset(SDL_Renderer* renderer) {
 
 void MainObject::initMain(SDL_Renderer* renderer) {
 
-	rect.x = 0;
-	rect.y = 0;
+	rect.x = 1;
+	rect.y = 1;
 	rect.w = Width;
 	rect.h = Height;
 	texture = loadTexture(BIRD_FILE, renderer);
@@ -85,9 +85,9 @@ void MainObject::tick() {
 	currentFrame = (currentFrame + 1) % clips.size();
 }
 
-const SDL_Rect* MainObject::getCurrentClip() const
+const SDL_Rect* MainObject::getCurrentClip() const // * ?? phù h?p tham s? RenderCopy (GameObject.cpp)
 {
-	return &(clips[currentFrame]);
+	return &(clips[currentFrame]); 
 }
 
 MainObject::~MainObject() {
@@ -141,12 +141,12 @@ void MainObject::HandleInputAction(SDL_Event& events) {
 	}
 }
 
-bool MainObject::collision(SDL_Rect& threat) // Pass-by-reference to change threat
+bool MainObject::collision(SDL_Rect threat) // Pass-by-reference to change threat's rect
 {
-	int left1 = rect.x * 1.15, right1 = rect.x + rect.w * 0.85;
-	int top1 = rect.y, bottom1 = rect.y + rect.h;
+	int left1 = rect.x, right1 = rect.x + rect.w * 0.8; // 0.8 to make collision clear
+	int top1 = rect.y, bottom1 = rect.y + rect.h * 0.8;
 
-	int left2 = threat.x * 1.15, right2 = threat.x + threat.w * 0.85;
+	int left2 = threat.x, right2 = threat.x + threat.w;
 	int top2 = threat.y, bottom2 = threat.y + threat.h;
 
 
