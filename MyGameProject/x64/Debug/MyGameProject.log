@@ -1,5 +1,7 @@
 ﻿  GameObject.cpp
-  main.cpp
+  MainObject.cpp
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp(162,29): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ADMIN\source\repos\MyGameProject\MyGameProject\MainObject.cpp(163,29): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  MainObject.h
   Generating Code...
-x64\Debug\MainObject.obj : warning LNK4042: object specified more than once; extras ignored
   MyGameProject.vcxproj -> C:\Users\ADMIN\source\repos\MyGameProject\x64\Debug\MyGameProject.exe

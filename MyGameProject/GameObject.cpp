@@ -10,6 +10,7 @@ void Game::initGame() {
 
 	window = initWin();
 	renderer = initRen(window);
+
 	background = loadTexture("vecteezy_cartoon-colorful-panorama-of-spring-summer-beautiful-nature_7633071-1.jpg", renderer);
 	heart = loadTexture("Saver.png", renderer);
 	heartRect = { 5, 3, 100, 100 };
@@ -21,18 +22,26 @@ void Game::initGame() {
 	SDL_RenderCopy(renderer, background, NULL, NULL);
 	player.initMain(renderer);
 	player.initClip(player.texture, FRAME_NUMBERS, BIRD);
-	renderClip(player);
-	// render(renderer, player.texture, player.rect);
 	for (int i = 0; i < Threat_number; i++) { troop[i].initThreat(renderer); }
 	gift.initThreat(renderer);
-	gift.texture = loadTexture("Gift.png", renderer);
+	gift.texture = loadTexture("Gift.png", renderer); // Sua lai texture so voi ham initThreat
 }
 
-void Game::renderClip(MainObject& myBird) { 
+void Game::renderGame() {
 
-	const SDL_Rect* clipRect = myBird.getCurrentClip(); // * ?? phù h?p tham s? RenderCopy
-	SDL_Rect renderQuad = { myBird.rect.x, myBird.rect.y, clipRect->w, clipRect->h };
-	SDL_RenderCopy(renderer, myBird.texture, clipRect, &renderQuad); // source (clip) - destination (current x, y - w,h is similar to clipRect)
+	SDL_RenderClear(renderer);
+
+	SDL_RenderCopy(renderer, background, NULL, NULL);
+	SDL_RenderCopy(renderer, gift.texture, NULL, &gift.rect);
+	for (int i = 0; i < Threat_number; i++) {
+		SDL_RenderCopy(renderer, troop[i].texture, NULL, &troop[i].rect);
+	}
+    SDL_RenderCopy(renderer, heart, NULL, &heartRect);
+
+	player.renderBird(renderer);
+
+	SDL_RenderPresent(renderer); // Bay gio moi Present
+	SDL_Delay(20); // De CPU do lag, tranh bi giat man hinh / animation qua nhanh
 }
 
 
@@ -42,7 +51,6 @@ void Game::playGame() {
 	playChunk(welcome);
 	while (!quit)
 	{
-		// Uint32 startTime = SDL_GetTicks() / 1000;
 		SDL_RenderClear(renderer);
 		SDL_RenderCopy(renderer, menu.texture, NULL, NULL);
 		SDL_RenderPresent(renderer); // Show Menu
@@ -99,12 +107,12 @@ void Game::playGame() {
 
 					while (again) {
 
+						Uint32 preTime = SDL_GetTicks();
+
 						cout << "START AGAIN! " << endl;
 						bool gameQuit = false;
 						while (!gameQuit) {
 
-							// Uint32 currentTime = SDL_GetTicks() / 1000;
-							// cout << "Time: " << currentTime << endl;
 							playMusic(backgroundMusic);
 							while (SDL_PollEvent(&event)) {
 
@@ -120,22 +128,12 @@ void Game::playGame() {
 								}
 							}
 
-							// Player 
-							SDL_RenderClear(renderer);
-							SDL_RenderCopy(renderer, background, NULL, NULL);
 							player.point.updateTexture(renderer);
-							render(renderer, player.point.texture, player.point.rect);
-							render(renderer, player.point.chanceTexture, player.point.chanceRect);
-							render(renderer, player.point.recordTexture, player.point.recordRect);
-							// render(renderer, player.texture, player.rect);
-							player.tick();
-							renderClip(player);
-							render(renderer, heart, heartRect);
 
 							// Gift
 							gift.moveControl();
 							cout << "Gift: " << gift.rect.x << " " << gift.rect.y << endl;
-							render(renderer, gift.texture, gift.rect);
+
 							if (gift.rect.x <= 0) {
 								gift.rect.x = 10000;
 							}
@@ -162,7 +160,6 @@ void Game::playGame() {
 									cout << "Get Point: " << player.point.score << endl;
 								}
 
-								render(renderer, troop[i].texture, troop[i].rect);
 								cout << "Threat: " << troop[i].rect.x << " " << troop[i].rect.y << endl;
 
 								bool isCollision = player.collision(troop[i].rect);
@@ -172,30 +169,38 @@ void Game::playGame() {
 									if (player.point.chance == 0) {
 
 										SDL_Delay(2000);
+										// -> Reset lai vi tri cho threat chuan bi lan choi moi:
 										for (int i = 0; i < Threat_number; i++) troop[i].initThreat(renderer);
+										gift.initThreat(renderer);
 										Mix_HaltMusic();
 										playChunk(end);
-										// Reset lai vi tri cho threat chuan bi lan choi moi
+										
 										if (player.point.score > player.point.recordPoint) {
 											saveRecord(player.point.score);
 											player.point.recordPoint = player.point.score;
 										}
+
 										cout << "Game Over! " << endl;
 										gameQuit = true;
-										// menu.status = EXIT; 
 									}
 									else {
 										player.point.chance--;
 										for (int i = 0; i < Threat_number; i++) troop[i].initThreat(renderer);
-										// Phai reset lai neu ko se xay ra tiep dien va cham lien tuc, mang ve 0 rat nhanh
+										gift.initThreat(renderer);
+										// Phai reset lai neu ko se xay ra tiep dien va cham lien tuc, score ve 0 rat nhanh
 									}
 								}
 							}
-							SDL_RenderPresent(renderer);
-							SDL_Delay(20); // De CPU do lag, tranh bi giat man hinh
+
+							renderGame();
+							Uint32 currentTime = SDL_GetTicks();
+							if (currentTime - preTime >= 80) {
+								player.tick();
+								preTime = currentTime;
+							}
 						} // gameQuit == true
 
-						player.reset(renderer);
+						player.reset(); // reset lai bird, da reset threat o tren
 
 						bool overQuit = false;
 						while (!overQuit) {
@@ -238,6 +243,7 @@ void Game::playGame() {
 		} // pollEvent
 	} // quit
 }
+
 
 Game::~Game() {
 

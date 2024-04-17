@@ -12,7 +12,7 @@ void ThreatObject::initThreat(SDL_Renderer* renderer){
 	rect.w = ThreatWidth / 2;
 	rect.h = ThreatHeight / 2;
 
-	v = 40;
+	v = 40;	
 	texture = loadTexture("Threat.png", renderer);
 	threatAppearance = loadSound("Wind.wav");
 }
@@ -20,7 +20,6 @@ void ThreatObject::initThreat(SDL_Renderer* renderer){
 
 
 ThreatObject::~ThreatObject() {
-
 
 	if (texture != nullptr) {
 

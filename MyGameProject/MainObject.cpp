@@ -12,13 +12,16 @@ Point::Point() {
 	rect.x = 500;
 	rect.y = 3;
 	rect.w = 200;
-	rect.h = 50;
+	rect.h = 50; // Current Point
+
 	texture = nullptr;
 	chanceTexture = nullptr;
 	recordTexture = nullptr;
+
 	chanceRect = { 100, 3, 50, 50 };
 	recordRect = { SCREEN_WIDTH * 3 / 4, 3, 200, 50 };
 }
+
 
 Point::~Point() {
 
@@ -48,12 +51,15 @@ void Point::updateTexture(SDL_Renderer* renderer) {
 	}
 }
 
-void MainObject::reset(SDL_Renderer* renderer) {
 
-	initMain(renderer); // Reset lai vi tri player
+void MainObject::reset() {
+
+	rect.x = 1;
+	rect.y = 1;
 	point.score = 0; // Reset score cho lan choi tiep theo
 	point.chance = 3; // Reset Chance
 }
+
 
 void MainObject::initMain(SDL_Renderer* renderer) {
 
@@ -64,6 +70,7 @@ void MainObject::initMain(SDL_Renderer* renderer) {
 	texture = loadTexture(BIRD_FILE, renderer);
 	collisionSound = loadSound("Collision.wav");
 }
+
 
 void MainObject::initClip(SDL_Texture* _texture, int frames, const int _clips[][4]) {
 
@@ -104,6 +111,15 @@ MainObject::~MainObject() {
 }
 
 
+void MainObject::renderBird(SDL_Renderer* renderer) {
+
+	render(renderer, point.texture, point.rect);
+	render(renderer, point.chanceTexture, point.chanceRect);
+	render(renderer, point.recordTexture, point.recordRect);
+	SDL_RenderCopy(renderer, texture, &(clips[currentFrame]), &rect);
+}
+
+
 void MainObject::HandleInputAction(SDL_Event& events) {
 
 	if (events.type == SDL_KEYDOWN) {
@@ -141,7 +157,7 @@ void MainObject::HandleInputAction(SDL_Event& events) {
 	}
 }
 
-bool MainObject::collision(SDL_Rect threat) // Pass-by-reference to change threat's rect
+bool MainObject::collision(SDL_Rect threat) 
 {
 	int left1 = rect.x, right1 = rect.x + rect.w * 0.8; // 0.8 to make collision clear
 	int top1 = rect.y, bottom1 = rect.y + rect.h * 0.8;
@@ -165,5 +181,7 @@ bool MainObject::collision(SDL_Rect threat) // Pass-by-reference to change threa
 
 	return false;
 }
+
+
 
 

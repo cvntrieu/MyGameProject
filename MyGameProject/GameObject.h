@@ -29,10 +29,11 @@ private:
 	Mix_Music* backgroundMusic;
 	Mix_Chunk* welcome;
 	Mix_Chunk* end;
+	Uint32 startTime; // Tgian dau tien
 
 public:
 	void initGame();
-	void renderClip(MainObject& myBird);
+	void renderGame();
 	void playGame();
 	~Game();
 };

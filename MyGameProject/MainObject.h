@@ -11,6 +11,7 @@ class Point : public BaseObject {
 public:
 
 	int score, chance, recordPoint;
+	// texture = scoreTexture;
 	SDL_Texture* chanceTexture;
 	SDL_Texture* recordTexture;
 	SDL_Rect chanceRect;
@@ -35,10 +36,12 @@ public:
 	void initClip(SDL_Texture* _texture, int frames, const int _clips[][4]);
 	void tick();
 	const SDL_Rect* getCurrentClip() const;
+
 	~MainObject();
-	void reset(SDL_Renderer* renderer);
+	void reset();
 	void HandleInputAction(SDL_Event& events);
 	bool collision(SDL_Rect threat);
+	void renderBird(SDL_Renderer* renderer);
 };
 
 #endif
